@@ -45,13 +45,14 @@ def get_data(roll):
         print(Colour.GREEN+'Extracting '+roll+Colour.END)
         if(roll in std_map):
             std = std_map[roll]
-            data.append(std)
-            print('got chached data')
+            if(std.name!='-' and std.cgpa!='0'):
+                data.append(std)
+                print('got chached data')
         else:
             std = Student(roll)
             std.fetch_data()
-            # if(std.name!='-'):
-            data.append(std)
+            if(std.name!='-' and std.cgpa!='0'):
+                data.append(std)
 
     return data
 

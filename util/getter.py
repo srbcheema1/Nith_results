@@ -66,7 +66,7 @@ def get_branch_name(branch):
     if(branch in branch_data):
         return branch_data[branch]
     else:
-        return brancr_data['0']
+        return branch_data['0']
 
 
 def get_curr_year(roll):
