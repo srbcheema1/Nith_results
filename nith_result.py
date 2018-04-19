@@ -1,154 +1,14 @@
 #!/usr/bin/env python3
 
-import requests
 import json
-
-from os import environ
-from bs4 import BeautifulSoup
 from sys import argv, exit
 
-from abs_path import abs_path
-from srbColour import Colour
-
-default_file_name = './results.json'
-
-def get_year(roll):
-    roll = str(roll)
-    if(roll[0]=='i'):#iitu
-        year = roll[5:7]
-    else:
-        year = roll[0:2]
-    return year
-
-
-def get_college(roll):
-    roll = str(roll)
-    if(roll[0]=='i'):#iitu
-        college = "iiitu"
-    else:
-        college = "nith"
-    return college
-
-
-def get_c_id(roll):
-    roll = str(roll)
-    if(roll[0]=='i'):#iitu
-        c_id="iiituna"
-    else:
-        c_id="scheme"
-    return c_id
-
-
-def get_num(roll):
-    roll = str(roll)
-    if(roll[2]=='m' or roll[2]=='M'):
-        num=roll[5:7]
-    elif(roll[0]=='i'):
-        num=roll[8:10]
-    else:
-        num=roll[3:5]
-    return num
-
-
-def get_branch(roll):
-    roll = str(roll)
-    if(roll[2]=='m' or roll[2]=='M'):
-        branch=roll[2:4].lower()
-        branch+=str(roll[4])
-    elif(roll[0]=='i'):
-        branch=roll[7]
-    else:
-        branch=roll[2]
-    return branch
-
-
-def get_branch_name(branch):
-    branch_data = {
-            "1":"Civil",
-            "2":"Electrical",
-            "3":"Mechanical",
-            "4":"Ece",
-            "5":"Cse",
-            "6":"Architecture",
-            "7":"Chemical",
-            "mi5":"Cse dual",
-            "mi4":"Ece dual",
-            "0":"unknown"
-    }
-    if(branch in branch_data):
-        return branch_data[branch]
-    else:
-        return branch_data['0']
-
-
-def get_curr_year(roll):
-    # set base_year as year of 1st year students
-    base_year = 17
-    year = get_year(roll)
-    curr_year = base_year - int(year) + 1
-    return str(curr_year)
-
-
-class Student:
-    try:
-        proxyDict = {
-                    'http_proxy': environ['http_proxy'],
-                    'https_proxy': environ['https_proxy'],
-                    'ftp_proxy': environ['ftp_proxy']
-                }
-    except KeyError:
-        proxyDict = None
-
-    def __init__(self,roll):
-        roll = str(roll)
-        self.inflate_data(roll)
-
-    def inflate_data(self,roll):
-        self.year = get_year(roll)
-        self.num = get_num(roll)
-        self.branch = get_branch(roll)
-        self.branch_name = get_branch_name(self.branch)
-        self.c_id = get_c_id(roll)
-        self.college = get_college(roll)
-        self.roll_num = self.year+self.branch+self.num
-        if(roll[0]=='i'):
-            self.roll_num = "iiitu" + self.roll_num
-        self.name = ""
-        self.sgpa = ""
-        self.cgpa = ""
-        self.points = ""
-        self.rank = '0'
-        self.g_rank = '0'
-        self.gender = ''
-
-    def cached_data(self,name,gender,sgpa,cgpa,points,rank,g_rank):
-        self.name = name
-        self.sgpa = sgpa
-        self.cgpa = cgpa
-        self.points = points
-        self.rank = rank
-        self.g_rank = g_rank
-        self.gender = gender
-
-    def fetch_data(self):
-        try:
-            url = "http://14.139.56.15/"+self.c_id+self.year+"/studentresult/details.asp"
-            page = requests.post(url,data={'RollNumber':self.roll_num},proxies=Student.proxyDict,verify=False)
-            soup = BeautifulSoup(page.text,'lxml')
-            self.all_data = soup.find_all(class_='ewTable')
-            self.name=self.all_data[0].find_all('tr')[0].find_all('td')[1].text.strip()
-            res = self.all_data[-1].find_all('tr')[1].find_all('td')
-            self.sgpa = res[0].text.strip().split("=")[1]
-            cgpa_ = res[2].text.strip()
-            self.points = cgpa_.split("/")[0]
-            self.cgpa = cgpa_.split("=")[1]
-        except:
-            self.name = '-'
-            self.sgpa = self.points = self.cgpa = '0'
-
-    def get_result(self):
-        out = self.roll_num +"\n\t" + self.name + "\n\t" + self.sgpa + "\n\t" +self.points+ "\n\t" + self.cgpa
-        return out
+from util.abs_path import abs_path
+from util.srbColour import Colour
+from util.student import Student
+from util.getter import get_year, get_curr_year
+from util.string_constants import default_file_name
+from util.limits import default_no_of_std, iiitu_no_of_std, dual_no_of_std
 
 
 def sort_sgpa(std):
@@ -160,11 +20,11 @@ def sort_cgpa(std):
 def get_data(roll):
     data=[]
     temp = roll[:-2]
-    a,b = 1,90
+    a,b = 1,default_no_of_std
     if(roll[0]=='i'):
-        b=40
+        b=iiitu_no_of_std
     if(roll[2]=='m'):
-        b=65
+        b=dual_no_of_std
 
     for i in range(a,b):
         roll = temp
