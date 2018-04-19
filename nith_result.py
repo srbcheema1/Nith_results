@@ -6,15 +6,28 @@ from sys import argv, exit
 from util.abs_path import abs_path
 from util.srbColour import Colour
 from util.student import Student
-from util.getter import get_year, get_curr_year
+from util.getter import get_year
 from util.string_constants import default_file_name
 from util.limits import default_no_of_std, iiitu_no_of_std, dual_no_of_std
+from util.srbjson import extract_data, dump_data
 
 
 def sort_sgpa(std):
     return float(std.sgpa)
 def sort_cgpa(std):
     return float(std.cgpa)
+
+
+std_map = {}
+def create_std_map():
+    data = extract_data()
+    data = data['Students']
+    global std_map
+    for item in data:
+        std = Student(item['Rollno'])
+        std.cached_data(item['Name'],item['Gender'],item['Sgpa'] \
+            ,item['Cgpa'],item['Points'],item['Rank'],item['G_rank'])
+        std_map[item['Rollno']] = std
 
 
 def get_data(roll):
@@ -32,14 +45,13 @@ def get_data(roll):
         print(Colour.GREEN+'Extracting '+roll+Colour.END)
         if(roll in std_map):
             std = std_map[roll]
-            if(std.name!='-'):
-                data.append(std)
+            data.append(std)
             print('got chached data')
         else:
             std = Student(roll)
             std.fetch_data()
-            if(std.name!='-'):
-                data.append(std)
+            # if(std.name!='-'):
+            data.append(std)
 
     return data
 
@@ -51,106 +63,6 @@ def print_data(data):
         print(item.get_result())
         print()
         rank +=1
-
-
-def create_file(fille):
-    template = {
-        "Students":[
-            # "roll_num":{
-                # "Name":"name_of_std",
-                # "Gender":"0",
-                # "Year":"0",
-                # "Rank_overall":"0",
-                # "Gender_rank":"0",
-                # "CGPI":"0",
-                # "SGPI":"0",
-                # "Points":"0",
-                # "Branch_name":"name_of_branch"
-            # }
-        ]
-    }
-    jfile = open(fille, 'w')
-    json.dump(template,jfile,indent = 4,ensure_ascii = False)
-    jfile.close()
-
-
-def extract_data(file_name=default_file_name):
-    fille = abs_path(file_name)
-    try:
-        jfile = open(fille)
-    except FileNotFoundError:
-        create_file(fille)
-    jfile = open(fille)
-    data = json.load(jfile)
-    if(not 'Students' in data.keys()):
-        create_file(fille)
-        jfile = open(fille)
-        data = json.load(jfile)
-    return data
-
-
-std_map = {}
-def create_std_map():
-    data = extract_data()
-    data = data['Students']
-    global std_map
-    for item in data:
-        std = Student(item['Rollno'])
-        std.cached_data(item['Name'],item['Gender'],item['Sgpa'] \
-            ,item['Cgpa'],item['Points'],item['Rank'],item['G_rank'])
-        std_map[item['Rollno']] = std
-
-
-def create_info_dict(rank,std):
-    info = {}
-    info['Rank'] = str(rank)
-    info['G_rank'] = ""
-    info['Name'] = std.name
-    info['Rollno'] = std.roll_num
-    info['Gender'] = ""
-    info['Year'] = get_curr_year(std.roll_num)
-    info['Cgpa'] = std.cgpa
-    info['Sgpa'] = std.sgpa
-    info['Points'] = std.points
-    info['Branch_name'] = std.branch_name
-    return info
-
-
-def create_info_list(rank,std):
-    info = []
-    info.append({"Rank":str(rank)})
-    info.append({"G_Rank":""})
-    info.append({"Name":std.name})
-    info.append({"Rollno":std.roll_num})
-    info.append({"Gender":''})
-    info.append({"Year":get_curr_year(std.roll_num)})
-    info.append({"Cgpa":std.cgpa})
-    info.append({"Sgpa":std.sgpa})
-    info.append({"Points":std.points})
-    info.append({"Branch_name":std.branch_name})
-    return info
-
-
-def write_data(data,file_name=default_file_name):
-    fille = abs_path(file_name)
-    jfile = open(fille, 'w')
-    json.dump(data,jfile,indent = 4,ensure_ascii = False)
-    jfile.close()
-
-
-def dump_data(data,file_name=default_file_name):
-    fille = abs_path(file_name)
-    create_file(fille)
-    dictt = extract_data()
-    rank = 1
-    for item in data:
-        info = create_info_dict(rank,item)
-        # info = create_info_list(rank,item)
-        dictt['Students'].append(info)
-        rank +=1
-    # print(dictt)
-    write_data(dictt)
-
 
 def full_class(roll):
     data=[]
@@ -168,7 +80,8 @@ def full_class(roll):
 
 def full_year(roll):
     y = get_year(roll)
-    classes = [y+'101',y+'201',y+'301',y+'401',y+'501',y+'601',y+'701',y+'mi501',y+'mi401','iiitu'+y+'101']
+    classes = [y+'101',y+'201',y+'301',y+'401',y+'501',y+'601',y+'701',y+'mi501',y
+            +'mi401','iiitu'+y+'101','iiitu'+y+'201']
     data=[]
     for roll in classes:
         data.extend(get_data(roll))

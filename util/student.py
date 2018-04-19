@@ -1,6 +1,7 @@
 import requests
 from os import environ
 from bs4 import BeautifulSoup
+from util.srbColour import Colour
 
 from util.getter import get_num, get_year, get_branch, get_college, get_c_id, get_branch_name
 
@@ -63,5 +64,17 @@ class Student:
 
     def get_result(self):
         out = self.roll_num +"\n\t" + self.name + "\n\t" + self.sgpa + "\n\t" +self.points+ "\n\t" + self.cgpa
+        return out
+
+    def print_info(self):
+        out = Colour.GREEN + "roll_bum : "  + Colour.YELLOW + self.roll_num     + "\n" \
+            + Colour.GREEN + "name : "      + Colour.YELLOW + self.name         + "\n" \
+            + Colour.GREEN + "rank : "      + Colour.YELLOW + self.rank         + "\n" \
+            + Colour.GREEN + "gender : "    + Colour.YELLOW + self.gender       + "\n" \
+            + Colour.GREEN + "branch : "    + Colour.YELLOW + self.branch       + "\n" \
+            + Colour.GREEN + "g_rank : "    + Colour.YELLOW + self.g_rank       + "\n" \
+            + Colour.GREEN + "points : "    + Colour.YELLOW + self.points       + "\n" \
+            + Colour.GREEN + "cpga : "      + Colour.YELLOW + self.cgpa         + "\n" \
+            + Colour.END
         return out
 
