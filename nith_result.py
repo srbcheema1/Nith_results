@@ -1,22 +1,27 @@
-#!/usr/bin/env python3
+#/usr/bin/env python3
 
 import json
+import sys
 from sys import argv, exit
 
 from util.abs_path import abs_path
-from util.srbColour import Colour
-from util.student import Student
-from util.getter import get_year
-from util.string_constants import default_file_name
+from util.getter import get_year, get_branch, get_year, get_branch, get_branch_name
 from util.limits import default_no_of_std, iiitu_no_of_std, dual_no_of_std
+from util.srbColour import Colour
 from util.srbjson import extract_data, dump_data
+from util.string_constants import default_file_name
+from util.student import Student
+from util.files import verify_folder
+
+
+# dump switches
+dump_it = False
 
 
 def sort_sgpa(std):
     return float(std.sgpa)
 def sort_cgpa(std):
     return float(std.cgpa)
-
 
 std_map = {}
 def create_std_map():
@@ -68,27 +73,70 @@ def print_data(data):
 def full_class(roll):
     data=[]
     data.extend(get_data(roll))
+    print_data(data)
+
+    global stdout
+    save_stdout = sys.stdout
+    verify_folder(abs_path('./result'))
 
     data.sort(key=sort_sgpa,reverse=True)
+    sys.stdout = open('result/'+get_branch_name(get_branch(roll))+'_'+get_year(roll)+'_sgpi.txt','w')
     print("sorting by sgpi....\n\n\n")
     print_data(data)
 
     data.sort(key=sort_cgpa,reverse=True)
+    sys.stdout = open('result/'+get_branch_name(get_branch(roll))+'_'+get_year(roll)+'_cgpi.txt','w')
     print("sorting by cgpi....\n\n\n")
     print_data(data)
-    dump_data(data)
+
+    sys.stdout = save_stdout
+    print("written into files in result folder....\n\n")
+    if(dump_it):
+        dump_data(data)
 
 
 def full_year(roll):
+    data=[]
     y = get_year(roll)
     classes = [y+'101',y+'201',y+'301',y+'401',y+'501',y+'601',y+'701',y+'mi501',y
             +'mi401','iiitu'+y+'101','iiitu'+y+'201']
-    data=[]
+
+    global stdout
+    save_stdout = sys.stdout
+    verify_folder(abs_path('./result'))
+
     for roll in classes:
-        data.extend(get_data(roll))
+        class_data = get_data(roll)
+        branch_name = get_branch_name(get_branch(roll))
+        verify_folder(abs_path('./result/'+branch_name))
+
+        class_data.sort(key=sort_sgpa,reverse=True)
+        sys.stdout = open('result/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_sgpi.txt','w')
+        print("sorting by sgpi....\n\n\n")
+        print_data(class_data)
+
+        class_data.sort(key=sort_cgpa,reverse=True)
+        sys.stdout = open('result/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_cgpi.txt','w')
+        print("sorting by cgpi....\n\n\n")
+        print_data(class_data)
+
+        data.extend(class_data)
+        sys.stdout = save_stdout
+
+    data.sort(key=sort_sgpa,reverse=True)
+    sys.stdout = open('result/full_year_'+get_year(roll)+'_sgpi.txt','w')
+    print("sorting by sgpi....\n\n\n")
+    print_data(data)
 
     data.sort(key=sort_cgpa,reverse=True)
-    dump_data(data)
+    sys.stdout = open('result/full_year_'+get_year(roll)+'_cgpi.txt','w')
+    print("sorting by cgpi....\n\n\n")
+    print_data(data)
+
+    sys.stdout = save_stdout
+    print("written into files in result folder....\n\n")
+    if(dump_it):
+        dump_data(data)
 
 
 if(__name__=="__main__"):
@@ -110,6 +158,7 @@ if(__name__=="__main__"):
     if(ans!='y'):
         exit()
 
-    create_std_map()
+    if(dump_it):
+        create_std_map()
     # full_class(roll)
     full_year(roll)

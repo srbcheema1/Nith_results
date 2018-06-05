@@ -1,0 +1,340 @@
+sorting by cgpi....
+
+
+
+1 15748
+	Siddhant Gulati
+	9.62
+	1183
+	9.39
+
+2 15734
+	Arjun Malhotra
+	9.75
+	1182
+	9.38
+
+3 15728
+	Robin Singh
+	9.25
+	1153
+	9.15
+
+4 15756
+	Chandra Prakash Sharma
+	9.54
+	1126
+	8.94
+
+5 15701
+	Shivam Mahajan
+	9.29
+	1127
+	8.94
+
+6 15751
+	Atul Sharma
+	8.96
+	1097
+	8.71
+
+7 15716
+	Priyanshi Gupta
+	9.17
+	1096
+	8.7
+
+8 15731
+	Aditya Goyal
+	8.38
+	1086
+	8.62
+
+9 15752
+	Lokesh Kumar Surana
+	8.71
+	1073
+	8.52
+
+10 15721
+	Vaibhav Chittora
+	8.29
+	1072
+	8.51
+
+11 15704
+	Abhishek Kumar Sharma
+	7.67
+	1065
+	8.45
+
+12 15712
+	Abhishek Dhlotra
+	9.08
+	1058
+	8.4
+
+13 15722
+	Himanshu Bhardwaj
+	7.04
+	1058
+	8.4
+
+14 15725
+	Jayant Nagar
+	8.42
+	1046
+	8.3
+
+15 15705
+	Amritanshu Dogra
+	8.04
+	1029
+	8.17
+
+16 15729
+	Ankush Thakur
+	8.58
+	1027
+	8.15
+
+17 15703
+	Movin Sharma
+	8.08
+	1025
+	8.13
+
+18 15709
+	Balbir Singh
+	8.12
+	1009
+	8.01
+
+19 15720
+	Arpit Thakur
+	7.54
+	1007
+	7.99
+
+20 15715
+	Sunayana Chandel
+	8.29
+	1002
+	7.95
+
+21 15714
+	Mahesh Kumar Thakur
+	7.79
+	1000
+	7.94
+
+22 15741
+	Rashmi Pathania
+	7.58
+	997
+	7.91
+
+23 15708
+	Anchal Bahman
+	8.67
+	976
+	7.75
+
+24 15750
+	Ravi Kumar
+	7.62
+	972
+	7.71
+
+25 15753
+	Vikas Kumar
+	7.54
+	959
+	7.61
+
+26 15726
+	Shivam Sinha
+	7.58
+	947
+	7.52
+
+27 15737
+	Rishabh Chauhan
+	7.04
+	943
+	7.48
+
+28 15719
+	Radhika Bagaria
+	8.5
+	941
+	7.47
+
+29 15733
+	Upender Kumar
+	7.54
+	940
+	7.46
+
+30 15706
+	Sahil Kumar
+	7.38
+	425
+	7.46
+
+31 15739
+	Rakesh Ranjan
+	6.88
+	940
+	7.46
+
+32 15724
+	Anmol Sharma
+	7.5
+	921
+	7.31
+
+33 15707
+	Vishal Kumar
+	7.67
+	919
+	7.29
+
+34 15730
+	Abhishek Bhardwaj
+	7.08
+	911
+	7.23
+
+35 15710
+	Monika Guleria
+	6.67
+	894
+	7.1
+
+36 15713
+	Shaipshi
+	7.5
+	889
+	7.06
+
+37 15749
+	Prateek Kumar
+	6.92
+	878
+	6.97
+
+38 15742
+	Ankit Tanwar
+	7.79
+	877
+	6.96
+
+39 15736
+	Shailendra
+	7.21
+	876
+	6.95
+
+40 15723
+	Govind Meena
+	7.04
+	841
+	6.67
+
+41 15738
+	Udai Sharma
+	5.96
+	797
+	6.33
+
+42 15745
+	Dhawal Agrawal
+	5.12
+	780
+	6.19
+
+43 15711
+	Kmalesh Kumar
+	5.62
+	767
+	6.09
+
+44 15743
+	Apoorv Gautam
+	5.54
+	766
+	6.08
+
+45 15727
+	Rahul
+	4.75
+	745
+	5.91
+
+46 15755
+	Khushbu Kumari
+	5.88
+	736
+	5.84
+
+47 15718
+	Sandeep Bhardwaj
+	4.88
+	725
+	5.75
+
+48 15740
+	Ashutosh Pandey
+	4.54
+	723
+	5.74
+
+49 15702
+	Abhishek
+	4.17
+	722
+	5.73
+
+50 15754
+	Mahendra Kumar Meena
+	5.88
+	682
+	5.41
+
+51 15747
+	Aman Rana
+	4
+	676
+	5.37
+
+52 15735
+	Harpreet Singh
+	5.54
+	659
+	5.23
+
+53 15717
+	Uttkarsh Dhiman
+	4.25
+	659
+	5.23
+
+54 15744
+	Dharmendra Kumar
+	3.96
+	642
+	5.1
+
+55 15746
+	SachinKumar Tiwari
+	3.08
+	584
+	4.63
+
+56 15732
+	Ajay Kumar Bagri
+	0
+	114
+	3.45
+

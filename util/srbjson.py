@@ -81,7 +81,7 @@ def create_info_list(rank,std):
 
 def write_data(data,file_name=default_file_name):
     """
-    Write data into a json file
+    Write RAW data into a json file
     """
     fille = abs_path(file_name)
     jfile = open(fille, 'w')
@@ -91,7 +91,9 @@ def write_data(data,file_name=default_file_name):
 
 def dump_data(data,file_name=default_file_name):
     """
-    take a list of Students and burn it into json file
+    take a LIST of Students and burn it into json file
+    create RAW data from LIST
+    uses write_data
     """
     fille = abs_path(file_name)
     create_file(fille)

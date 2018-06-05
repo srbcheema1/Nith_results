@@ -44,7 +44,7 @@ def get_branch(roll):
         branch=roll[2:4].lower()
         branch+=str(roll[4])
     elif(roll[0]=='i'):
-        branch=roll[7]
+        branch='una'+roll[7]
     else:
         branch=roll[2]
     return branch
@@ -59,8 +59,10 @@ def get_branch_name(branch):
             "5":"Cse",
             "6":"Architecture",
             "7":"Chemical",
-            "mi5":"Cse dual",
-            "mi4":"Ece dual",
+            "mi5":"Cse_dual",
+            "mi4":"Ece_dual",
+            "una1":"Cse_una",
+            "una2":"Ece_una",
             "0":"unknown"
     }
     if(branch in branch_data):

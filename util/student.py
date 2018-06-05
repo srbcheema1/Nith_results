@@ -20,6 +20,9 @@ class Student:
         self.inflate_data(roll)
 
     def inflate_data(self,roll):
+        """
+        inflate all the data that can be extracted using roll no
+        """
         self.year = get_year(roll)
         self.num = get_num(roll)
         self.branch = get_branch(roll)
@@ -28,7 +31,7 @@ class Student:
         self.college = get_college(roll)
         self.roll_num = self.year+self.branch+self.num
         if(roll[0]=='i'):
-            self.roll_num = "iiitu" + self.roll_num
+            self.roll_num = "iiitu" + self.year + self.branch[3:] + self.num
         self.name = ""
         self.sgpa = ""
         self.cgpa = ""
