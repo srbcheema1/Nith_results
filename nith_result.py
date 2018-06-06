@@ -1,5 +1,6 @@
 #/usr/bin/env python3
 
+import argparse
 import json
 import sys
 from sys import argv, exit
@@ -75,17 +76,17 @@ def full_class(roll):
     data.extend(get_data(roll))
     print_data(data)
 
-    global stdout
     save_stdout = sys.stdout
-    verify_folder(abs_path('./result'))
+    branch_name = get_branch_name(get_branch(roll))
+    verify_folder(abs_path('./result/'+branch_name))
 
     data.sort(key=sort_sgpa,reverse=True)
-    sys.stdout = open('result/'+get_branch_name(get_branch(roll))+'_'+get_year(roll)+'_sgpi.txt','w')
+    sys.stdout = open('result/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_sgpi.txt','w')
     print("sorting by sgpi....\n\n\n")
     print_data(data)
 
     data.sort(key=sort_cgpa,reverse=True)
-    sys.stdout = open('result/'+get_branch_name(get_branch(roll))+'_'+get_year(roll)+'_cgpi.txt','w')
+    sys.stdout = open('result/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_cgpi.txt','w')
     print("sorting by cgpi....\n\n\n")
     print_data(data)
 
@@ -101,7 +102,6 @@ def full_year(roll):
     classes = [y+'101',y+'201',y+'301',y+'401',y+'501',y+'601',y+'701',y+'mi501',y
             +'mi401','iiitu'+y+'101','iiitu'+y+'201']
 
-    global stdout
     save_stdout = sys.stdout
     verify_folder(abs_path('./result'))
 
@@ -123,13 +123,14 @@ def full_year(roll):
         data.extend(class_data)
         sys.stdout = save_stdout
 
+    verify_folder(abs_path('./result/FULL_YEAR'))
     data.sort(key=sort_sgpa,reverse=True)
-    sys.stdout = open('result/full_year_'+get_year(roll)+'_sgpi.txt','w')
+    sys.stdout = open('result/FULL_YEAR/full_year_'+get_year(roll)+'_sgpi.txt','w')
     print("sorting by sgpi....\n\n\n")
     print_data(data)
 
     data.sort(key=sort_cgpa,reverse=True)
-    sys.stdout = open('result/full_year_'+get_year(roll)+'_cgpi.txt','w')
+    sys.stdout = open('result/FULL_YEAR/full_year_'+get_year(roll)+'_cgpi.txt','w')
     print("sorting by cgpi....\n\n\n")
     print_data(data)
 
@@ -140,25 +141,36 @@ def full_year(roll):
 
 
 if(__name__=="__main__"):
-    ans = 'n'
-    if(len(argv)==2):
-        roll=argv[1]
-        ans = 'y'
-    else:
-        print("enter ur roll : ",end='')
-        roll = str(input())
-        roll = roll.lower()
-        print("do you want relult of whole class y or n : ",end='')
-        ans = input()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-d", "--dump", action="store_true", help="used to dump the output to json file")
+    parser.add_argument("-c", "--cached", action="store_true", help="use cached_data from json file")
 
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("-b", "--branch", action="store_true", help="full result of your branch")
+    group.add_argument("-y", "--year", action="store_true", help="full result of your year")
+
+    parser.add_argument("-r", "--roll", help="ROLL number eg:- 15mi535")
+    args = parser.parse_args()
+
+    if(args.dump):
+        dump_it = True
+
+    if(args.roll):
+        roll = args.roll
+    else:
+        roll = input('Enter your roll number : ')
+        print('use: python3 nith_results.py -h for help')
+
+    roll = roll.lower()
     std = Student(roll)
     std.fetch_data()
     print(std.get_result())
 
-    if(ans!='y'):
-        exit()
 
-    if(dump_it):
+    if(args.cached):
         create_std_map()
-    # full_class(roll)
-    full_year(roll)
+    if(args.branch):
+        full_class(roll)
+    if(args.year):
+        full_year(roll)
+    print(Colour.PURPLE+'A script by srbcheema1'+Colour.END)

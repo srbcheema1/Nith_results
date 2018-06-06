@@ -3,517 +3,517 @@ sorting by cgpi....
 
 
 1 15278
-	Saurav Kumar
+	SAURAV KUMAR
 	9.04
 	1122
 	8.77
 
 2 15253
-	Shubham Vijay
+	SHUBHAM VIJAY
 	8.88
 	1122
 	8.77
 
 3 15255
-	Ankit Kothari
+	ANKIT KOTHARI
 	8.67
 	1108
 	8.66
 
 4 15201
-	Komal Raina
+	KOMAL RAINA
 	8.83
 	1106
 	8.64
 
 5 15256
-	Mohan Lal
+	MOHAN LAL
 	9.38
 	1103
 	8.62
 
 6 15239
-	Vibhor Garg
+	VIBHOR GARG
 	9.38
 	1093
 	8.54
 
 7 15213
-	Kajal Parmar
+	KAJAL PARMAR
 	8.88
 	1092
 	8.53
 
 8 15202
-	Abhay Raj
+	ABHAY RAJ
 	8.75
 	1090
 	8.52
 
 9 15268
-	Abhinay Singh
+	ABHINAY SINGH
 	8.42
 	1091
 	8.52
 
 10 15270
-	MD Imamuddin
+	MD IMAMUDDIN
 	9
 	1089
 	8.51
 
 11 15208
-	Rohit Pandey
+	ROHIT PANDEY
 	8.54
 	1081
 	8.45
 
 12 15279
-	Satish Kumar
+	SATISH KUMAR
 	8.88
 	1073
 	8.38
 
 13 15228
-	Ritesh Sandal
+	RITESH SANDAL
 	8.54
 	1071
 	8.37
 
 14 15246
-	Rakesh Nagwan
+	RAKESH NAGWAN
 	8.5
 	1067
 	8.34
 
 15 15259
-	Raj Bhanwar singh Rathore
+	RAJ BHANWAR SINGH RATHORE
 	8.83
 	1065
 	8.32
 
 16 15240
-	Manvi Katwal
+	MANVI KATWAL
 	8.5
 	1060
 	8.28
 
 17 15273
-	Surendar
+	SURENDAR
 	8.21
 	1045
 	8.16
 
 18 15252
-	Vinod Manani
+	VINOD MANANI
 	8.42
 	1038
 	8.11
 
 19 15209
-	Nishant Sharma
+	NISHANT SHARMA
 	8.71
 	1030
 	8.05
 
 20 15227
-	Meena
+	MEENA
 	8.54
 	1029
 	8.04
 
 21 15214
-	Sachin Kumar Singh
+	SACHIN KUMAR SINGH
 	8.21
 	1026
 	8.02
 
 22 15204
-	Banish Chauhan
+	BANISH CHAUHAN
 	8.46
 	1024
 	8
 
 23 15281
-	Manoj Kumar
+	MANOJ KUMAR
 	8.12
 	1024
 	8
 
 24 15269
-	Rishabh Mishra
+	RISHABH MISHRA
 	9.25
 	1023
 	7.99
 
 25 15243
-	Ramesh Chand Yadav
+	RAMESH CHAND YADAV
 	8.46
 	1022
 	7.98
 
 26 15242
-	Vishnu Gochar
+	VISHNU GOCHAR
 	7.83
 	1016
 	7.94
 
 27 15238
-	Raunak Tailor
+	RAUNAK TAILOR
 	7.46
 	1014
 	7.92
 
 28 15229
-	Saurav Verma
+	SAURAV VERMA
 	8
 	1011
 	7.9
 
 29 15250
-	DHRUV vASHIST
+	DHRUV VASHIST
 	8.5
 	1005
 	7.85
 
 30 15267
-	Vishakha Yadav
+	VISHAKHA YADAV
 	8
 	1005
 	7.85
 
 31 15206
-	Abhishek
+	ABHISHEK
 	8.33
 	1002
 	7.83
 
 32 15275
-	Shubham Jain
+	SHUBHAM JAIN
 	7.67
 	994
 	7.77
 
 33 15263
-	Aman Kumar Jain
+	AMAN KUMAR JAIN
 	8.17
 	991
 	7.74
 
 34 15272
-	Abhisen Meena
+	ABHISEN MEENA
 	8
 	987
 	7.71
 
 35 15261
-	Sushant Sharma
+	SUSHANT SHARMA
 	8.62
 	983
 	7.68
 
 36 15212
-	Shourya Sharma
+	SHOURYA SHARMA
 	8.67
 	982
 	7.67
 
 37 15230
-	Harsh Rehal
+	HARSH REHAL
 	7.25
 	981
 	7.66
 
 38 15285
-	Kumari Shubham Priya
+	KUMARI SHUBHAM PRIYA
 	8.46
 	973
 	7.6
 
 39 15217
-	Monish Kumar
+	MONISH KUMAR
 	8.25
 	971
 	7.59
 
 40 15258
-	Mohit Rana
+	MOHIT RANA
 	7.62
 	971
 	7.59
 
 41 15219
-	Chaudhary Rituraj Patel
+	CHAUDHARY RITURAJ PATEL
 	8.42
 	968
 	7.56
 
 42 15234
-	Ravinder Singh
+	RAVINDER SINGH
 	7.83
 	967
 	7.55
 
 43 15225
-	Ankit Sharma
+	ANKIT SHARMA
 	7.62
 	967
 	7.55
 
 44 15220
-	Vineet Sharma
+	VINEET SHARMA
 	7
 	966
 	7.55
 
 45 15260
-	Jaswant Singh Choudhary
+	JASWANT SINGH CHOUDHARY
 	7.62
 	961
 	7.51
 
 46 15224
-	Aashish Kapoor
+	AASHISH KAPOOR
 	7.46
 	959
 	7.49
 
 47 15280
-	Sudeep Mohan
+	SUDEEP MOHAN
 	8.42
 	958
 	7.48
 
 48 15286
-	Soniya Negi
+	SONIYA NEGI
 	7.67
 	954
 	7.45
 
 49 15262
-	Krishan Kumar Meena
+	KRISHAN KUMAR MEENA
 	7.54
 	953
 	7.45
 
 50 15237
-	Abhishek Sharma
+	ABHISHEK SHARMA
 	8.08
 	952
 	7.44
 
 51 15222
-	Mitul Sharma
+	MITUL SHARMA
 	8.12
 	950
 	7.42
 
 52 15205
-	Rijul Mehra
+	RIJUL MEHRA
 	8.04
 	949
 	7.41
 
 53 15289
-	Vivek Kumar Sharma
+	VIVEK KUMAR SHARMA
 	7.21
 	948
 	7.41
 
 54 15248
-	Sonam Chaudhary
+	SONAM CHAUDHARY
 	7.88
 	946
 	7.39
 
 55 15277
-	Rijul Sabal
+	RIJUL SABAL
 	7.79
 	945
 	7.38
 
 56 15249
-	Bablu Bairwa
+	BABLU BAIRWA
 	7.46
 	944
 	7.38
 
 57 15216
-	Anshul
+	ANSHUL
 	7.5
 	936
 	7.31
 
 58 15218
-	Sumnesh Bharti
+	SUMNESH BHARTI
 	7.96
 	932
 	7.28
 
 59 15274
-	Rishi Sood
+	RISHI SOOD
 	7.71
 	932
 	7.28
 
 60 15264
-	Pawan Divya
+	PAWAN DIVYA
 	8.67
 	931
 	7.27
 
 61 15203
-	Rohit Mehra
+	ROHIT MEHRA
 	7.62
 	931
 	7.27
 
 62 15276
-	Ashish Binjarawat
+	ASHISH BINJARAWAT
 	8.04
 	924
 	7.22
 
 63 15247
-	Sagar Dhiman
+	SAGAR DHIMAN
 	7.38
 	924
 	7.22
 
 64 15251
-	Rohit Meena
+	ROHIT MEENA
 	8
 	919
 	7.18
 
 65 15221
-	Nikhil Naik
+	NIKHIL NAIK
 	8.12
 	918
 	7.17
 
 66 15254
-	Mohit Abrol
+	MOHIT ABROL
 	7.71
 	918
 	7.17
 
 67 15223
-	Aashish Mali
+	AASHISH MALI
 	7.62
 	916
 	7.16
 
 68 15207
-	Sahil Kumar
+	SAHIL KUMAR
 	7.58
 	912
 	7.12
 
 69 15287
-	Rishi Raj Modi
+	RISHI RAJ MODI
 	7.83
 	902
 	7.05
 
 70 15215
-	Rohit Bharti
+	ROHIT BHARTI
 	7.71
 	902
 	7.05
 
 71 15233
-	Aditya
+	ADITYA
 	7.21
 	896
 	7
 
 72 15235
-	Yogesh Mangal
+	YOGESH MANGAL
 	7.42
 	895
 	6.99
 
 73 15284
-	Vinay Negi
+	VINAY NEGI
 	7.46
 	883
 	6.9
 
 74 15211
-	Ashish
+	ASHISH
 	7.29
 	873
 	6.82
 
 75 15241
-	Ashok Kumar
+	ASHOK KUMAR
 	6.62
 	860
 	6.72
 
 76 15265
-	Ankur Sharma
+	ANKUR SHARMA
 	6.42
 	855
 	6.68
 
 77 15266
-	Rohit Kumar
+	ROHIT KUMAR
 	6.75
 	850
 	6.64
 
 78 15288
-	Atal Kumar
+	ATAL KUMAR
 	6.62
 	820
 	6.41
 
 79 15244
-	Ketu Kumar Sahitya
+	KETU KUMAR SAHITYA
 	7
 	755
 	5.9
 
 80 15226
-	Nimish Tomar
+	NIMISH TOMAR
 	5.83
 	739
 	5.77
 
 81 15210
-	Saurabh Dhiman
+	SAURABH DHIMAN
 	6.46
 	677
 	5.29
 
 82 15245
-	Abhishek
+	ABHISHEK
 	4.25
 	665
 	5.2
 
 83 15257
-	Ranveer Singh
+	RANVEER SINGH
 	5.08
 	646
 	5.05
 
 84 15236
-	Parvesh Kumar
+	PARVESH KUMAR
 	5.92
 	628
 	4.91
 
 85 15232
-	Anshul Sharma
+	ANSHUL SHARMA
 	5.25
 	597
 	4.66
 
 86 15231
-	Gaurav Kumar
+	GAURAV KUMAR
 	3.96
 	443
 	3.46

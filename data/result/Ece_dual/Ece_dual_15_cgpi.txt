@@ -1,0 +1,322 @@
+sorting by cgpi....
+
+
+
+1 15mi445
+	Animesh Srivastava
+	9.2
+	1163
+	9.23
+
+2 15mi420
+	Apoorva Jha
+	8.48
+	1085
+	8.61
+
+3 15mi427
+	Ritwik Sharma
+	8.76
+	1062
+	8.43
+
+4 15mi447
+	Monika Devi
+	7.6
+	1050
+	8.33
+
+5 15mi436
+	Anurag Dubey
+	7.28
+	1048
+	8.32
+
+6 15mi453
+	Voleti Bhargav
+	8.8
+	1046
+	8.3
+
+7 15mi405
+	Kavya Sharma
+	8.28
+	1036
+	8.22
+
+8 15mi402
+	Vertika Sharma
+	8.08
+	1035
+	8.21
+
+9 15mi408
+	Aman Choudhary
+	8.4
+	1032
+	8.19
+
+10 15mi432
+	Akshay Singh
+	7.68
+	1014
+	8.05
+
+11 15mi414
+	Mohit Kumar Sipani
+	8.16
+	1005
+	7.98
+
+12 15mi409
+	Somya Saraswat
+	8.12
+	992
+	7.87
+
+13 15mi412
+	Vaibhav Thakur
+	7.68
+	985
+	7.82
+
+14 15mi429
+	Amit Rana
+	7.52
+	982
+	7.79
+
+15 15mi438
+	Rohit Nagar
+	7.04
+	982
+	7.79
+
+16 15mi423
+	Ashish Verma
+	8.16
+	973
+	7.72
+
+17 15mi407
+	Umesh Chand Pant
+	7.2
+	971
+	7.71
+
+18 15mi449
+	Lekhraj Kumar
+	8.56
+	965
+	7.66
+
+19 15mi443
+	Pankaj Gupta
+	7.52
+	960
+	7.62
+
+20 15mi426
+	Rajan Verma
+	7.48
+	956
+	7.59
+
+21 15mi428
+	Ajay Singh Gobari
+	7.4
+	950
+	7.54
+
+22 15mi403
+	Shubham
+	7.4
+	947
+	7.52
+
+23 15mi404
+	Shikhar Sood
+	7.16
+	948
+	7.52
+
+24 15mi416
+	Nitish Parmar
+	7.6
+	939
+	7.45
+
+25 15mi440
+	Prasoon Raghuwanshi
+	7.04
+	931
+	7.39
+
+26 15mi415
+	Ashish Kaushal
+	7.12
+	926
+	7.35
+
+27 15mi435
+	Abhishek Sharma
+	6.84
+	921
+	7.31
+
+28 15mi413
+	Komal Mehra
+	7.88
+	912
+	7.24
+
+29 15mi442
+	Bijendra Kumar Ray
+	5.64
+	910
+	7.22
+
+30 15mi437
+	Dasari Nagasai Nagarjuna
+	8.16
+	903
+	7.17
+
+31 15mi417
+	Nidhi Meena
+	6.8
+	878
+	6.97
+
+32 15mi418
+	Priyanshu Sadwal
+	7.12
+	870
+	6.9
+
+33 15mi421
+	hARISH kUMAR
+	7.24
+	868
+	6.89
+
+34 15mi451
+	Divyansh Dhiman
+	7.28
+	857
+	6.8
+
+35 15mi430
+	Saravjit Singh
+	5.56
+	792
+	6.29
+
+36 15mi425
+	Gaurav Dhiman
+	5.68
+	785
+	6.23
+
+37 15mi422
+	Sachin Kumar
+	5.64
+	784
+	6.22
+
+38 15mi411
+	Aarjav Parashar
+	6.76
+	768
+	6.1
+
+39 15mi424
+	Vivek Kumar
+	4.96
+	769
+	6.1
+
+40 15mi448
+	Sapna
+	5.72
+	739
+	5.87
+
+41 15mi439
+	Anshul Dhiman
+	6.32
+	731
+	5.8
+
+42 15mi450
+	Wridhdhisom Karar
+	0
+	263
+	5.72
+
+43 15mi452
+	Mayank Meena
+	5.48
+	707
+	5.61
+
+44 15mi431
+	Gajendra Babu
+	5.44
+	691
+	5.48
+
+45 15mi401
+	Anand Vibhuti
+	4.48
+	669
+	5.31
+
+46 15mi406
+	Utkarsh Kumar
+	4.24
+	651
+	5.17
+
+47 15mi433
+	Kalintha Arun Sagar
+	5.04
+	625
+	4.96
+
+48 15mi419
+	Gaurav Kumar
+	4.6
+	565
+	4.48
+
+49 15mi434
+	Vikas Choudhary
+	0
+	135
+	3.55
+
+50 15mi444
+	Nitin Kumar
+	0
+	97
+	3.34
+
+51 15mi446
+	Sumit Kumar
+	5.52
+	332
+	2.63
+
+52 15mi454
+	Akshay Choudhary
+	0
+	94
+	2.24
+
+53 15mi441
+	Jagrit Biswas
+	0
+	82
+	2.1
+

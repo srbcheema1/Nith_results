@@ -1,4 +1,4 @@
-RESULT_SCRIPT=python3 nith_result.py
+RESULT_SCRIPT=python3 nith_result.py -cydr
 
 all: year_1 year_2 year_3 year_4
 

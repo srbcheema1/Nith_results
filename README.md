@@ -12,14 +12,15 @@
 
    * First clone the this repo to your PC. `git clone https://github.com/srbcheema1/Nith_results`
    * Create virtual environment and install the requirements
-   * Now run the command `python3 nith_results.py`
+   * Now run the command `python3 nith_results.py -h`
+   * Example `python3 nith_results.py -cydr 15mi535`
    * OR you may also use `make` command
 
 
  * Available stats
 
    * You can check out already calculated data in folder data
-   * Also you can find out final_list.json containing data for 3rd year students
+   * Also you can find out `final_list.json` containing data for 3rd year students
 
 
  * Available results

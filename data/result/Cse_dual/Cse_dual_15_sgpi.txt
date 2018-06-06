@@ -1,0 +1,316 @@
+sorting by sgpi....
+
+
+
+1 15mi548
+	Sakshi Pushkar
+	9.68
+	1147
+	8.82
+
+2 15mi530
+	Raj Rahi
+	9.32
+	1034
+	7.95
+
+3 15mi512
+	Vrinda Gupta
+	8.96
+	1083
+	8.33
+
+4 15mi538
+	Mayank Kumar Singh
+	8.92
+	1034
+	7.95
+
+5 15mi544
+	Prashant Kumar Arora
+	8.88
+	1088
+	8.37
+
+6 15mi522
+	Apurav Sen
+	8.84
+	1035
+	7.96
+
+7 15mi509
+	Prakriti Gupta
+	8.8
+	1127
+	8.67
+
+8 15mi532
+	Gautam Kumar Poddar
+	8.76
+	981
+	7.55
+
+9 15mi552
+	Anvesh Anand
+	8.72
+	1106
+	8.51
+
+10 15mi524
+	Arzoo
+	8.6
+	1025
+	7.88
+
+11 15mi506
+	Nimit Bhardwaj
+	8.56
+	1161
+	8.93
+
+12 15mi525
+	Akanksha
+	8.56
+	1025
+	7.88
+
+13 15mi536
+	Rakesh kumar
+	8.56
+	1034
+	7.95
+
+14 15mi516
+	Shubham Sharma
+	8.52
+	1008
+	7.75
+
+15 15mi519
+	Prafull Dhiman
+	8.52
+	978
+	7.52
+
+16 15mi527
+	Archit Jain
+	8.52
+	1080
+	8.31
+
+17 15mi511
+	Vishal Choudhary
+	8.44
+	1043
+	8.02
+
+18 15mi537
+	Ashutosh Dubey
+	8.44
+	973
+	7.48
+
+19 15mi553
+	Anant Vikram Singh
+	8.44
+	933
+	7.18
+
+20 15mi534
+	Anishka Gupta
+	8.36
+	1069
+	8.22
+
+21 15mi535
+	Sarbjit Singh
+	8.36
+	1091
+	8.39
+
+22 15mi510
+	Mohit Patyal
+	8.28
+	928
+	7.14
+
+23 15mi531
+	Gaurav Kumar
+	8.28
+	901
+	6.93
+
+24 15mi545
+	Akshat Sharma
+	8.24
+	942
+	7.25
+
+25 15mi528
+	Rashi Sah
+	8.2
+	1075
+	8.27
+
+26 15mi543
+	Vishal Bhardwaj
+	8.08
+	992
+	7.63
+
+27 15mi550
+	Rohit Sharma
+	8.08
+	869
+	6.68
+
+28 15mi505
+	Lalit Yadav
+	8
+	1038
+	7.98
+
+29 15mi551
+	Sobhan S Kothari
+	8
+	870
+	6.69
+
+30 15mi515
+	Surbhi
+	7.92
+	928
+	7.14
+
+31 15mi541
+	Sushant Sharma
+	7.92
+	944
+	7.26
+
+32 15mi503
+	Anjali Kaushal
+	7.88
+	912
+	7.02
+
+33 15mi518
+	Pinak Sharma
+	7.8
+	938
+	7.22
+
+34 15mi540
+	Amar Kumar
+	7.8
+	828
+	6.37
+
+35 15mi549
+	Pritam Verma
+	7.76
+	902
+	6.94
+
+36 15mi502
+	Sourav Sahoo
+	7.72
+	1017
+	7.82
+
+37 15mi542
+	Prashant Gupta
+	7.64
+	924
+	7.11
+
+38 15mi513
+	Sunidhi
+	7.6
+	1001
+	7.7
+
+39 15mi517
+	Saurabh Rashpa
+	7.6
+	876
+	6.74
+
+40 15mi521
+	Anubhav Markanday
+	7.52
+	835
+	6.42
+
+41 15mi523
+	Gourav Kandoria
+	7.52
+	789
+	6.07
+
+42 15mi504
+	Aayush Gupta
+	7.44
+	953
+	7.33
+
+43 15mi507
+	Vinod Kumar
+	7.4
+	834
+	6.42
+
+44 15mi539
+	Amandeep Singh
+	7.24
+	870
+	6.69
+
+45 15mi526
+	Naresh Kumar
+	7.2
+	759
+	5.98
+
+46 15mi508
+	Aniket Bhardwaj
+	7.16
+	853
+	6.56
+
+47 15mi547
+	Pramod Kumar Singh
+	6.96
+	847
+	6.52
+
+48 15mi520
+	Gopal Khatri
+	6.92
+	908
+	6.98
+
+49 15mi514
+	Alka
+	6.68
+	899
+	6.92
+
+50 15mi533
+	Ashwani Kumar
+	6.68
+	828
+	6.37
+
+51 15mi529
+	Nishant
+	1.6
+	521
+	4.01
+
+52 15mi546
+	Aditya Saharan
+	0
+	413
+	4.92
+

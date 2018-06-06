@@ -56,6 +56,7 @@ class Student:
             soup = BeautifulSoup(page.text,'lxml')
             self.all_data = soup.find_all(class_='ewTable')
             self.name=self.all_data[0].find_all('tr')[0].find_all('td')[1].text.strip()
+            self.name=self.name.upper()
             res = self.all_data[-1].find_all('tr')[1].find_all('td')
             self.sgpa = res[0].text.strip().split("=")[1]
             cgpa_ = res[2].text.strip()

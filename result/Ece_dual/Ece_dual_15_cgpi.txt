@@ -3,319 +3,319 @@ sorting by cgpi....
 
 
 1 15mi445
-	Animesh Srivastava
+	ANIMESH SRIVASTAVA
 	9.2
 	1163
 	9.23
 
 2 15mi420
-	Apoorva Jha
+	APOORVA JHA
 	8.48
 	1085
 	8.61
 
 3 15mi427
-	Ritwik Sharma
+	RITWIK SHARMA
 	8.76
 	1062
 	8.43
 
 4 15mi447
-	Monika Devi
+	MONIKA DEVI
 	7.6
 	1050
 	8.33
 
 5 15mi436
-	Anurag Dubey
+	ANURAG DUBEY
 	7.28
 	1048
 	8.32
 
 6 15mi453
-	Voleti Bhargav
+	VOLETI BHARGAV
 	8.8
 	1046
 	8.3
 
 7 15mi405
-	Kavya Sharma
+	KAVYA SHARMA
 	8.28
 	1036
 	8.22
 
 8 15mi402
-	Vertika Sharma
+	VERTIKA SHARMA
 	8.08
 	1035
 	8.21
 
 9 15mi408
-	Aman Choudhary
+	AMAN CHOUDHARY
 	8.4
 	1032
 	8.19
 
 10 15mi432
-	Akshay Singh
+	AKSHAY SINGH
 	7.68
 	1014
 	8.05
 
 11 15mi414
-	Mohit Kumar Sipani
+	MOHIT KUMAR SIPANI
 	8.16
 	1005
 	7.98
 
 12 15mi409
-	Somya Saraswat
+	SOMYA SARASWAT
 	8.12
 	992
 	7.87
 
 13 15mi412
-	Vaibhav Thakur
+	VAIBHAV THAKUR
 	7.68
 	985
 	7.82
 
 14 15mi429
-	Amit Rana
+	AMIT RANA
 	7.52
 	982
 	7.79
 
 15 15mi438
-	Rohit Nagar
+	ROHIT NAGAR
 	7.04
 	982
 	7.79
 
 16 15mi423
-	Ashish Verma
+	ASHISH VERMA
 	8.16
 	973
 	7.72
 
 17 15mi407
-	Umesh Chand Pant
+	UMESH CHAND PANT
 	7.2
 	971
 	7.71
 
 18 15mi449
-	Lekhraj Kumar
+	LEKHRAJ KUMAR
 	8.56
 	965
 	7.66
 
 19 15mi443
-	Pankaj Gupta
+	PANKAJ GUPTA
 	7.52
 	960
 	7.62
 
 20 15mi426
-	Rajan Verma
+	RAJAN VERMA
 	7.48
 	956
 	7.59
 
 21 15mi428
-	Ajay Singh Gobari
+	AJAY SINGH GOBARI
 	7.4
 	950
 	7.54
 
 22 15mi403
-	Shubham
+	SHUBHAM
 	7.4
 	947
 	7.52
 
 23 15mi404
-	Shikhar Sood
+	SHIKHAR SOOD
 	7.16
 	948
 	7.52
 
 24 15mi416
-	Nitish Parmar
+	NITISH PARMAR
 	7.6
 	939
 	7.45
 
 25 15mi440
-	Prasoon Raghuwanshi
+	PRASOON RAGHUWANSHI
 	7.04
 	931
 	7.39
 
 26 15mi415
-	Ashish Kaushal
+	ASHISH KAUSHAL
 	7.12
 	926
 	7.35
 
 27 15mi435
-	Abhishek Sharma
+	ABHISHEK SHARMA
 	6.84
 	921
 	7.31
 
 28 15mi413
-	Komal Mehra
+	KOMAL MEHRA
 	7.88
 	912
 	7.24
 
 29 15mi442
-	Bijendra Kumar Ray
+	BIJENDRA KUMAR RAY
 	5.64
 	910
 	7.22
 
 30 15mi437
-	Dasari Nagasai Nagarjuna
+	DASARI NAGASAI NAGARJUNA
 	8.16
 	903
 	7.17
 
 31 15mi417
-	Nidhi Meena
+	NIDHI MEENA
 	6.8
 	878
 	6.97
 
 32 15mi418
-	Priyanshu Sadwal
+	PRIYANSHU SADWAL
 	7.12
 	870
 	6.9
 
 33 15mi421
-	hARISH kUMAR
+	HARISH KUMAR
 	7.24
 	868
 	6.89
 
 34 15mi451
-	Divyansh Dhiman
+	DIVYANSH DHIMAN
 	7.28
 	857
 	6.8
 
 35 15mi430
-	Saravjit Singh
+	SARAVJIT SINGH
 	5.56
 	792
 	6.29
 
 36 15mi425
-	Gaurav Dhiman
+	GAURAV DHIMAN
 	5.68
 	785
 	6.23
 
 37 15mi422
-	Sachin Kumar
+	SACHIN KUMAR
 	5.64
 	784
 	6.22
 
 38 15mi411
-	Aarjav Parashar
+	AARJAV PARASHAR
 	6.76
 	768
 	6.1
 
 39 15mi424
-	Vivek Kumar
+	VIVEK KUMAR
 	4.96
 	769
 	6.1
 
 40 15mi448
-	Sapna
+	SAPNA
 	5.72
 	739
 	5.87
 
 41 15mi439
-	Anshul Dhiman
+	ANSHUL DHIMAN
 	6.32
 	731
 	5.8
 
 42 15mi450
-	Wridhdhisom Karar
+	WRIDHDHISOM KARAR
 	0
 	263
 	5.72
 
 43 15mi452
-	Mayank Meena
+	MAYANK MEENA
 	5.48
 	707
 	5.61
 
 44 15mi431
-	Gajendra Babu
+	GAJENDRA BABU
 	5.44
 	691
 	5.48
 
 45 15mi401
-	Anand Vibhuti
+	ANAND VIBHUTI
 	4.48
 	669
 	5.31
 
 46 15mi406
-	Utkarsh Kumar
+	UTKARSH KUMAR
 	4.24
 	651
 	5.17
 
 47 15mi433
-	Kalintha Arun Sagar
+	KALINTHA ARUN SAGAR
 	5.04
 	625
 	4.96
 
 48 15mi419
-	Gaurav Kumar
+	GAURAV KUMAR
 	4.6
 	565
 	4.48
 
 49 15mi434
-	Vikas Choudhary
+	VIKAS CHOUDHARY
 	0
 	135
 	3.55
 
 50 15mi444
-	Nitin Kumar
+	NITIN KUMAR
 	0
 	97
 	3.34
 
 51 15mi446
-	Sumit Kumar
+	SUMIT KUMAR
 	5.52
 	332
 	2.63
 
 52 15mi454
-	Akshay Choudhary
+	AKSHAY CHOUDHARY
 	0
 	94
 	2.24
 
 53 15mi441
-	Jagrit Biswas
+	JAGRIT BISWAS
 	0
 	82
 	2.1

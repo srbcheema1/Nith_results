@@ -3,313 +3,313 @@ sorting by cgpi....
 
 
 1 15mi506
-	Nimit Bhardwaj
+	NIMIT BHARDWAJ
 	8.56
 	1161
 	8.93
 
 2 15mi548
-	Sakshi Pushkar
+	SAKSHI PUSHKAR
 	9.68
 	1147
 	8.82
 
 3 15mi509
-	Prakriti Gupta
+	PRAKRITI GUPTA
 	8.8
 	1127
 	8.67
 
 4 15mi552
-	Anvesh Anand
+	ANVESH ANAND
 	8.72
 	1106
 	8.51
 
 5 15mi535
-	Sarbjit Singh
+	SARBJIT SINGH
 	8.36
 	1091
 	8.39
 
 6 15mi544
-	Prashant Kumar Arora
+	PRASHANT KUMAR ARORA
 	8.88
 	1088
 	8.37
 
 7 15mi512
-	Vrinda Gupta
+	VRINDA GUPTA
 	8.96
 	1083
 	8.33
 
 8 15mi527
-	Archit Jain
+	ARCHIT JAIN
 	8.52
 	1080
 	8.31
 
 9 15mi528
-	Rashi Sah
+	RASHI SAH
 	8.2
 	1075
 	8.27
 
 10 15mi534
-	Anishka Gupta
+	ANISHKA GUPTA
 	8.36
 	1069
 	8.22
 
 11 15mi511
-	Vishal Choudhary
+	VISHAL CHOUDHARY
 	8.44
 	1043
 	8.02
 
 12 15mi505
-	Lalit Yadav
+	LALIT YADAV
 	8
 	1038
 	7.98
 
 13 15mi522
-	Apurav Sen
+	APURAV SEN
 	8.84
 	1035
 	7.96
 
 14 15mi530
-	Raj Rahi
+	RAJ RAHI
 	9.32
 	1034
 	7.95
 
 15 15mi538
-	Mayank Kumar Singh
+	MAYANK KUMAR SINGH
 	8.92
 	1034
 	7.95
 
 16 15mi536
-	Rakesh kumar
+	RAKESH KUMAR
 	8.56
 	1034
 	7.95
 
 17 15mi524
-	Arzoo
+	ARZOO
 	8.6
 	1025
 	7.88
 
 18 15mi525
-	Akanksha
+	AKANKSHA
 	8.56
 	1025
 	7.88
 
 19 15mi502
-	Sourav Sahoo
+	SOURAV SAHOO
 	7.72
 	1017
 	7.82
 
 20 15mi516
-	Shubham Sharma
+	SHUBHAM SHARMA
 	8.52
 	1008
 	7.75
 
 21 15mi513
-	Sunidhi
+	SUNIDHI
 	7.6
 	1001
 	7.7
 
 22 15mi543
-	Vishal Bhardwaj
+	VISHAL BHARDWAJ
 	8.08
 	992
 	7.63
 
 23 15mi532
-	Gautam Kumar Poddar
+	GAUTAM KUMAR PODDAR
 	8.76
 	981
 	7.55
 
 24 15mi519
-	Prafull Dhiman
+	PRAFULL DHIMAN
 	8.52
 	978
 	7.52
 
 25 15mi537
-	Ashutosh Dubey
+	ASHUTOSH DUBEY
 	8.44
 	973
 	7.48
 
 26 15mi504
-	Aayush Gupta
+	AAYUSH GUPTA
 	7.44
 	953
 	7.33
 
 27 15mi541
-	Sushant Sharma
+	SUSHANT SHARMA
 	7.92
 	944
 	7.26
 
 28 15mi545
-	Akshat Sharma
+	AKSHAT SHARMA
 	8.24
 	942
 	7.25
 
 29 15mi518
-	Pinak Sharma
+	PINAK SHARMA
 	7.8
 	938
 	7.22
 
 30 15mi553
-	Anant Vikram Singh
+	ANANT VIKRAM SINGH
 	8.44
 	933
 	7.18
 
 31 15mi510
-	Mohit Patyal
+	MOHIT PATYAL
 	8.28
 	928
 	7.14
 
 32 15mi515
-	Surbhi
+	SURBHI
 	7.92
 	928
 	7.14
 
 33 15mi542
-	Prashant Gupta
+	PRASHANT GUPTA
 	7.64
 	924
 	7.11
 
 34 15mi503
-	Anjali Kaushal
+	ANJALI KAUSHAL
 	7.88
 	912
 	7.02
 
 35 15mi520
-	Gopal Khatri
+	GOPAL KHATRI
 	6.92
 	908
 	6.98
 
 36 15mi549
-	Pritam Verma
+	PRITAM VERMA
 	7.76
 	902
 	6.94
 
 37 15mi531
-	Gaurav Kumar
+	GAURAV KUMAR
 	8.28
 	901
 	6.93
 
 38 15mi514
-	Alka
+	ALKA
 	6.68
 	899
 	6.92
 
 39 15mi517
-	Saurabh Rashpa
+	SAURABH RASHPA
 	7.6
 	876
 	6.74
 
 40 15mi551
-	Sobhan S Kothari
+	SOBHAN S KOTHARI
 	8
 	870
 	6.69
 
 41 15mi539
-	Amandeep Singh
+	AMANDEEP SINGH
 	7.24
 	870
 	6.69
 
 42 15mi550
-	Rohit Sharma
+	ROHIT SHARMA
 	8.08
 	869
 	6.68
 
 43 15mi508
-	Aniket Bhardwaj
+	ANIKET BHARDWAJ
 	7.16
 	853
 	6.56
 
 44 15mi547
-	Pramod Kumar Singh
+	PRAMOD KUMAR SINGH
 	6.96
 	847
 	6.52
 
 45 15mi521
-	Anubhav Markanday
+	ANUBHAV MARKANDAY
 	7.52
 	835
 	6.42
 
 46 15mi507
-	Vinod Kumar
+	VINOD KUMAR
 	7.4
 	834
 	6.42
 
 47 15mi540
-	Amar Kumar
+	AMAR KUMAR
 	7.8
 	828
 	6.37
 
 48 15mi533
-	Ashwani Kumar
+	ASHWANI KUMAR
 	6.68
 	828
 	6.37
 
 49 15mi523
-	Gourav Kandoria
+	GOURAV KANDORIA
 	7.52
 	789
 	6.07
 
 50 15mi526
-	Naresh Kumar
+	NARESH KUMAR
 	7.2
 	759
 	5.98
 
 51 15mi546
-	Aditya Saharan
+	ADITYA SAHARAN
 	0
 	413
 	4.92
 
 52 15mi529
-	Nishant
+	NISHANT
 	1.6
 	521
 	4.01

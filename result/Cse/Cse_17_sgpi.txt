@@ -159,7 +159,7 @@ sorting by sgpi....
 	7.59
 
 27 17503
-	Apresh Koundal
+	APRESH KOUNDAL
 	7.82
 	305
 	8.24
@@ -189,7 +189,7 @@ sorting by sgpi....
 	7.7
 
 32 17505
-	Shubhankar
+	SHUBHANKAR
 	7.71
 	303
 	8.19
@@ -453,7 +453,7 @@ sorting by sgpi....
 	6.05
 
 76 17506
-	Abhimanyu Singh Chittoria
+	ABHIMANYU SINGH CHITTORIA
 	5.35
 	236
 	6.38

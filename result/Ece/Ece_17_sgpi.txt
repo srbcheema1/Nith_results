@@ -9,7 +9,7 @@ sorting by sgpi....
 	9.73
 
 2 17421
-	Aradhita Sharma
+	ARADHITA SHARMA
 	9.67
 	351
 	9.49
@@ -93,7 +93,7 @@ sorting by sgpi....
 	8.68
 
 16 17403
-	Saksham kumar Sharma
+	SAKSHAM KUMAR SHARMA
 	8.67
 	320
 	8.65
@@ -135,7 +135,7 @@ sorting by sgpi....
 	8.22
 
 23 17451
-	Nirmal Kumar Singh
+	NIRMAL KUMAR SINGH
 	8.5
 	313
 	8.46
@@ -201,7 +201,7 @@ sorting by sgpi....
 	8
 
 34 17405
-	Sunil Kumar
+	SUNIL KUMAR
 	8.06
 	259
 	7
@@ -357,7 +357,7 @@ sorting by sgpi....
 	7.41
 
 60 17463
-	Kevin J Kurien
+	KEVIN J KURIEN
 	7.28
 	274
 	7.41
@@ -429,7 +429,7 @@ sorting by sgpi....
 	5.65
 
 72 17401
-	Rajat Kumar Saini
+	RAJAT KUMAR SAINI
 	6.22
 	189
 	5.11

@@ -69,7 +69,7 @@ sorting by sgpi....
 	8.24
 
 12 17301
-	Jayant Singh Chandel
+	JAYANT SINGH CHANDEL
 	8.47
 	314
 	8.26
@@ -177,7 +177,7 @@ sorting by sgpi....
 	7.55
 
 30 17385
-	Dushyant kr.Gupta
+	DUSHYANT KR.GUPTA
 	7.79
 	293
 	7.71
@@ -525,7 +525,7 @@ sorting by sgpi....
 	3.47
 
 88 17302
-	Anuj Bhardwaj
+	ANUJ BHARDWAJ
 	2.89
 	142
 	3.74
@@ -543,7 +543,7 @@ sorting by sgpi....
 	2.97
 
 91 17394
-	Sudhanshu Rana
+	SUDHANSHU RANA
 	1.53
 	79
 	2.08

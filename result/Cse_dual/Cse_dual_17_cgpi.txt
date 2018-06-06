@@ -81,7 +81,7 @@ sorting by cgpi....
 	8.22
 
 14 17mi502
-	Shivam Sood
+	SHIVAM SOOD
 	8.12
 	302
 	8.16
@@ -231,7 +231,7 @@ sorting by cgpi....
 	6.1
 
 39 17mi501
-	Pratyush Sharma
+	PRATYUSH SHARMA
 	6.53
 	220
 	5.95

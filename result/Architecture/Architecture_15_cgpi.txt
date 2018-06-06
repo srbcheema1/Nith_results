@@ -3,235 +3,235 @@ sorting by cgpi....
 
 
 1 15607
-	Nalini Sharma
+	NALINI SHARMA
 	8.5
 	1288
 	8.76
 
 2 15611
-	Neeraj Choudhary
+	NEERAJ CHOUDHARY
 	8.35
 	1273
 	8.66
 
 3 15636
-	Mayank Gupta
+	MAYANK GUPTA
 	8.5
 	1235
 	8.4
 
 4 15624
-	Tushar Pathak
+	TUSHAR PATHAK
 	8.62
 	1190
 	8.1
 
 5 15632
-	shivangi
+	SHIVANGI
 	7.73
 	1160
 	7.89
 
 6 15614
-	Abhinav Kumawat
+	ABHINAV KUMAWAT
 	7.15
 	1131
 	7.69
 
 7 15602
-	Ekant Sapahya
+	EKANT SAPAHYA
 	7.69
 	1128
 	7.67
 
 8 15640
-	Sanyam Gupta
+	SANYAM GUPTA
 	7.65
 	1108
 	7.54
 
 9 15623
-	Mukesh Chawla
+	MUKESH CHAWLA
 	7.38
 	1060
 	7.21
 
 10 15634
-	Mohamed Abdulla Shan
+	MOHAMED ABDULLA SHAN
 	7.62
 	1052
 	7.16
 
 11 15627
-	Priyansh Jain
+	PRIYANSH JAIN
 	7.04
 	1050
 	7.14
 
 12 15630
-	Rahul Kumar Verma
+	RAHUL KUMAR VERMA
 	6.38
 	1050
 	7.14
 
 13 15608
-	Shivani Choudhary
+	SHIVANI CHOUDHARY
 	6.31
 	1044
 	7.1
 
 14 15613
-	Shivam
+	SHIVAM
 	7.12
 	1038
 	7.06
 
 15 15617
-	Aakriti
+	AAKRITI
 	7
 	1035
 	7.04
 
 16 15620
-	Niharika
+	NIHARIKA
 	6.96
 	1030
 	7.01
 
 17 15621
-	Vasundhara
+	VASUNDHARA
 	7.73
 	1026
 	6.98
 
 18 15606
-	Prajwal Dhiman
+	PRAJWAL DHIMAN
 	7.12
 	1001
 	6.81
 
 19 15612
-	Sajal Katoch
+	SAJAL KATOCH
 	6.19
 	998
 	6.79
 
 20 15605
-	Ridhima Chawla
+	RIDHIMA CHAWLA
 	6.38
 	984
 	6.69
 
 21 15629
-	Neenu Bisht
+	NEENU BISHT
 	6.38
 	976
 	6.64
 
 22 15641
-	Hitesh Singh Bisht
+	HITESH SINGH BISHT
 	6.65
 	950
 	6.46
 
 23 15625
-	Shubham Sharma
+	SHUBHAM SHARMA
 	6.65
 	933
 	6.35
 
 24 15604
-	Sakshi Sharma
+	SAKSHI SHARMA
 	5.46
 	928
 	6.31
 
 25 15609
-	Nishant Rana
+	NISHANT RANA
 	5.77
 	917
 	6.24
 
 26 15631
-	Arnav Dasaur
+	ARNAV DASAUR
 	4.69
 	903
 	6.14
 
 27 15626
-	Deepshikha
+	DEEPSHIKHA
 	6.12
 	873
 	5.94
 
 28 15633
-	Rishab Khan
+	RISHAB KHAN
 	4.96
 	852
 	5.8
 
 29 15635
-	Aashima
+	AASHIMA
 	6.5
 	839
 	5.71
 
 30 15601
-	Vinay Sharma
+	VINAY SHARMA
 	5.65
 	833
 	5.67
 
 31 15616
-	Arnav Bhadoria
+	ARNAV BHADORIA
 	4.58
 	829
 	5.64
 
 32 15603
-	Dinesh Kataria
+	DINESH KATARIA
 	3.38
 	716
 	4.87
 
 33 15610
-	Abhinav Kumar
+	ABHINAV KUMAR
 	3.15
 	639
 	4.35
 
 34 15615
-	Anshul Khatta
+	ANSHUL KHATTA
 	1.88
 	546
 	3.71
 
 35 15619
-	Amit Kumar
+	AMIT KUMAR
 	0.92
 	461
 	3.14
 
 36 15638
-	Sunil Angral
+	SUNIL ANGRAL
 	0
 	320
 	2.27
 
 37 15618
-	Ankush Dogra
+	ANKUSH DOGRA
 	0.91
 	134
 	0.97
 
 38 15637
-	Naresh Kumar
+	NARESH KUMAR
 	0
 	41
 	0.3
 
 39 15622
-	Aakarsh Sharma
+	AAKARSH SHARMA
 	0
 	12
 	0.09

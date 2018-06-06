@@ -3,337 +3,337 @@ sorting by sgpi....
 
 
 1 15734
-	Arjun Malhotra
+	ARJUN MALHOTRA
 	9.75
 	1182
 	9.38
 
 2 15748
-	Siddhant Gulati
+	SIDDHANT GULATI
 	9.62
 	1183
 	9.39
 
 3 15756
-	Chandra Prakash Sharma
+	CHANDRA PRAKASH SHARMA
 	9.54
 	1126
 	8.94
 
 4 15701
-	Shivam Mahajan
+	SHIVAM MAHAJAN
 	9.29
 	1127
 	8.94
 
 5 15728
-	Robin Singh
+	ROBIN SINGH
 	9.25
 	1153
 	9.15
 
 6 15716
-	Priyanshi Gupta
+	PRIYANSHI GUPTA
 	9.17
 	1096
 	8.7
 
 7 15712
-	Abhishek Dhlotra
+	ABHISHEK DHLOTRA
 	9.08
 	1058
 	8.4
 
 8 15751
-	Atul Sharma
+	ATUL SHARMA
 	8.96
 	1097
 	8.71
 
 9 15752
-	Lokesh Kumar Surana
+	LOKESH KUMAR SURANA
 	8.71
 	1073
 	8.52
 
 10 15708
-	Anchal Bahman
+	ANCHAL BAHMAN
 	8.67
 	976
 	7.75
 
 11 15729
-	Ankush Thakur
+	ANKUSH THAKUR
 	8.58
 	1027
 	8.15
 
 12 15719
-	Radhika Bagaria
+	RADHIKA BAGARIA
 	8.5
 	941
 	7.47
 
 13 15725
-	Jayant Nagar
+	JAYANT NAGAR
 	8.42
 	1046
 	8.3
 
 14 15731
-	Aditya Goyal
+	ADITYA GOYAL
 	8.38
 	1086
 	8.62
 
 15 15715
-	Sunayana Chandel
+	SUNAYANA CHANDEL
 	8.29
 	1002
 	7.95
 
 16 15721
-	Vaibhav Chittora
+	VAIBHAV CHITTORA
 	8.29
 	1072
 	8.51
 
 17 15709
-	Balbir Singh
+	BALBIR SINGH
 	8.12
 	1009
 	8.01
 
 18 15703
-	Movin Sharma
+	MOVIN SHARMA
 	8.08
 	1025
 	8.13
 
 19 15705
-	Amritanshu Dogra
+	AMRITANSHU DOGRA
 	8.04
 	1029
 	8.17
 
 20 15714
-	Mahesh Kumar Thakur
+	MAHESH KUMAR THAKUR
 	7.79
 	1000
 	7.94
 
 21 15742
-	Ankit Tanwar
+	ANKIT TANWAR
 	7.79
 	877
 	6.96
 
 22 15704
-	Abhishek Kumar Sharma
+	ABHISHEK KUMAR SHARMA
 	7.67
 	1065
 	8.45
 
 23 15707
-	Vishal Kumar
+	VISHAL KUMAR
 	7.67
 	919
 	7.29
 
 24 15750
-	Ravi Kumar
+	RAVI KUMAR
 	7.62
 	972
 	7.71
 
 25 15726
-	Shivam Sinha
+	SHIVAM SINHA
 	7.58
 	947
 	7.52
 
 26 15741
-	Rashmi Pathania
+	RASHMI PATHANIA
 	7.58
 	997
 	7.91
 
 27 15720
-	Arpit Thakur
+	ARPIT THAKUR
 	7.54
 	1007
 	7.99
 
 28 15733
-	Upender Kumar
+	UPENDER KUMAR
 	7.54
 	940
 	7.46
 
 29 15753
-	Vikas Kumar
+	VIKAS KUMAR
 	7.54
 	959
 	7.61
 
 30 15713
-	Shaipshi
+	SHAIPSHI
 	7.5
 	889
 	7.06
 
 31 15724
-	Anmol Sharma
+	ANMOL SHARMA
 	7.5
 	921
 	7.31
 
 32 15706
-	Sahil Kumar
+	SAHIL KUMAR
 	7.38
 	425
 	7.46
 
 33 15736
-	Shailendra
+	SHAILENDRA
 	7.21
 	876
 	6.95
 
 34 15730
-	Abhishek Bhardwaj
+	ABHISHEK BHARDWAJ
 	7.08
 	911
 	7.23
 
 35 15722
-	Himanshu Bhardwaj
+	HIMANSHU BHARDWAJ
 	7.04
 	1058
 	8.4
 
 36 15723
-	Govind Meena
+	GOVIND MEENA
 	7.04
 	841
 	6.67
 
 37 15737
-	Rishabh Chauhan
+	RISHABH CHAUHAN
 	7.04
 	943
 	7.48
 
 38 15749
-	Prateek Kumar
+	PRATEEK KUMAR
 	6.92
 	878
 	6.97
 
 39 15739
-	Rakesh Ranjan
+	RAKESH RANJAN
 	6.88
 	940
 	7.46
 
 40 15710
-	Monika Guleria
+	MONIKA GULERIA
 	6.67
 	894
 	7.1
 
 41 15738
-	Udai Sharma
+	UDAI SHARMA
 	5.96
 	797
 	6.33
 
 42 15754
-	Mahendra Kumar Meena
+	MAHENDRA KUMAR MEENA
 	5.88
 	682
 	5.41
 
 43 15755
-	Khushbu Kumari
+	KHUSHBU KUMARI
 	5.88
 	736
 	5.84
 
 44 15711
-	Kmalesh Kumar
+	KMALESH KUMAR
 	5.62
 	767
 	6.09
 
 45 15735
-	Harpreet Singh
+	HARPREET SINGH
 	5.54
 	659
 	5.23
 
 46 15743
-	Apoorv Gautam
+	APOORV GAUTAM
 	5.54
 	766
 	6.08
 
 47 15745
-	Dhawal Agrawal
+	DHAWAL AGRAWAL
 	5.12
 	780
 	6.19
 
 48 15718
-	Sandeep Bhardwaj
+	SANDEEP BHARDWAJ
 	4.88
 	725
 	5.75
 
 49 15727
-	Rahul
+	RAHUL
 	4.75
 	745
 	5.91
 
 50 15740
-	Ashutosh Pandey
+	ASHUTOSH PANDEY
 	4.54
 	723
 	5.74
 
 51 15717
-	Uttkarsh Dhiman
+	UTTKARSH DHIMAN
 	4.25
 	659
 	5.23
 
 52 15702
-	Abhishek
+	ABHISHEK
 	4.17
 	722
 	5.73
 
 53 15747
-	Aman Rana
+	AMAN RANA
 	4
 	676
 	5.37
 
 54 15744
-	Dharmendra Kumar
+	DHARMENDRA KUMAR
 	3.96
 	642
 	5.1
 
 55 15746
-	SachinKumar Tiwari
+	SACHINKUMAR TIWARI
 	3.08
 	584
 	4.63
 
 56 15732
-	Ajay Kumar Bagri
+	AJAY KUMAR BAGRI
 	0
 	114
 	3.45
