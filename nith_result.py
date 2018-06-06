@@ -26,7 +26,7 @@ def sort_cgpa(std):
 
 std_map = {}
 def create_std_map():
-    data = extract_data()
+    data = extract_data(default_file_name)
     data = data['Students']
     global std_map
     for item in data:
@@ -93,7 +93,7 @@ def full_class(roll):
     sys.stdout = save_stdout
     print("written into files in result folder....\n\n")
     if(dump_it):
-        dump_data(data)
+        dump_data(data,default_file_name)
 
 
 def full_year(roll):
@@ -135,7 +135,7 @@ def full_year(roll):
     sys.stdout = save_stdout
     print("written into files in result folder....\n\n")
     if(dump_it):
-        dump_data(data)
+        dump_data(data,default_file_name)
 
 def full_college():
     data=[]
@@ -198,13 +198,14 @@ def full_college():
     sys.stdout = save_stdout
     print("written into files in result folder....\n\n")
     if(dump_it):
-        dump_data(data)
+        dump_data(data,default_file_name)
 
 
 if(__name__=="__main__"):
     parser = argparse.ArgumentParser()
     parser.add_argument("-d", "--dump", action="store_true", help="used to dump the output to json file")
     parser.add_argument("-c", "--cached", action="store_true", help="use cached_data from json file")
+    parser.add_argument("-f", "--file", default=default_file_name, help="name of json file")
 
     group = parser.add_mutually_exclusive_group()
     group.add_argument("-b", "--branch", action="store_true", help="full result of your branch")
@@ -228,7 +229,7 @@ if(__name__=="__main__"):
     std.fetch_data()
     print(std.get_result())
 
-
+    default_file_name = args.file
     if(args.cached):
         create_std_map()
         print('created map')
