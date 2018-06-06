@@ -104,5 +104,5 @@ def dump_data(data,file_name=default_file_name):
         # info = create_info_list(rank,item)
         dictt['Students'].append(info)
         rank +=1
-    write_data(dictt)
+    write_data(dictt,file_name)
 

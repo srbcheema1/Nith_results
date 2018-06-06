@@ -7,7 +7,7 @@ from sys import argv, exit
 
 from util.abs_path import abs_path
 from util.getter import get_year, get_branch, get_year, get_branch, get_branch_name
-from util.limits import default_no_of_std, iiitu_no_of_std, dual_no_of_std
+from util.limits import default_no_of_std, iiitu_no_of_std, dual_no_of_std, base_year, get_class_set
 from util.srbColour import Colour
 from util.srbjson import extract_data, dump_data
 from util.string_constants import default_file_name
@@ -99,11 +99,9 @@ def full_class(roll):
 def full_year(roll):
     data=[]
     y = get_year(roll)
-    classes = [y+'101',y+'201',y+'301',y+'401',y+'501',y+'601',y+'701',y+'mi501',y
-            +'mi401','iiitu'+y+'101','iiitu'+y+'201']
-
-    save_stdout = sys.stdout
+    classes = get_class_set(y)
     verify_folder(abs_path('./result'))
+    save_stdout = sys.stdout
 
     for roll in classes:
         class_data = get_data(roll)
@@ -139,6 +137,69 @@ def full_year(roll):
     if(dump_it):
         dump_data(data)
 
+def full_college():
+    data=[]
+    by = base_year
+    roll_set = []
+    for b in range(0,4):
+        roll_set.append(str(by-b)+'mi535')
+    save_stdout = sys.stdout
+
+    for roll in roll_set:
+        year_data=[]
+        y = get_year(roll)
+        classes = get_class_set(y)
+        verify_folder(abs_path('./result'))
+
+        for roll in classes:
+            class_data = get_data(roll)
+            branch_name = get_branch_name(get_branch(roll))
+            verify_folder(abs_path('./result/'+branch_name))
+
+            class_data.sort(key=sort_sgpa,reverse=True)
+            sys.stdout = open('result/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_sgpi.txt','w')
+            print("sorting by sgpi....\n\n\n")
+            print_data(class_data)
+
+            class_data.sort(key=sort_cgpa,reverse=True)
+            sys.stdout = open('result/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_cgpi.txt','w')
+            print("sorting by cgpi....\n\n\n")
+            print_data(class_data)
+
+            year_data.extend(class_data)
+            sys.stdout = save_stdout
+
+        verify_folder(abs_path('./result/FULL_YEAR'))
+
+        year_data.sort(key=sort_sgpa,reverse=True)
+        sys.stdout = open('result/FULL_YEAR/full_year_'+get_year(roll)+'_sgpi.txt','w')
+        print("sorting by sgpi....\n\n\n")
+        print_data(year_data)
+
+        year_data.sort(key=sort_cgpa,reverse=True)
+        sys.stdout = open('result/FULL_YEAR/full_year_'+get_year(roll)+'_cgpi.txt','w')
+        print("sorting by cgpi....\n\n\n")
+        print_data(year_data)
+
+        sys.stdout = save_stdout
+        data.append(year_data)
+
+    verify_folder(abs_path('./result/FULL_COLLEGE'))
+    data.sort(key=sort_sgpa,reverse=True)
+    sys.stdout = open('result/FULL_COLLEGE/full_year_'+get_year(roll)+'_sgpi.txt','w')
+    print("sorting by sgpi....\n\n\n")
+    print_data(data)
+
+    data.sort(key=sort_cgpa,reverse=True)
+    sys.stdout = open('result/FULL_COLLEGE/full_year_'+get_year(roll)+'_cgpi.txt','w')
+    print("sorting by cgpi....\n\n\n")
+    print_data(data)
+
+    sys.stdout = save_stdout
+    print("written into files in result folder....\n\n")
+    if(dump_it):
+        dump_data(data)
+
 
 if(__name__=="__main__"):
     parser = argparse.ArgumentParser()
@@ -148,6 +209,7 @@ if(__name__=="__main__"):
     group = parser.add_mutually_exclusive_group()
     group.add_argument("-b", "--branch", action="store_true", help="full result of your branch")
     group.add_argument("-y", "--year", action="store_true", help="full result of your year")
+    group.add_argument("-a", "--all", action="store_true", help="full result of college")
 
     parser.add_argument("-r", "--roll", help="ROLL number eg:- 15mi535")
     args = parser.parse_args()
@@ -169,8 +231,11 @@ if(__name__=="__main__"):
 
     if(args.cached):
         create_std_map()
+        print('created map')
     if(args.branch):
         full_class(roll)
     if(args.year):
         full_year(roll)
+    if(args.all):
+        full_college()
     print(Colour.PURPLE+'A script by srbcheema1'+Colour.END)
