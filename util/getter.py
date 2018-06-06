@@ -59,10 +59,12 @@ def get_branch_name(branch):
             "5":"Cse",
             "6":"Architecture",
             "7":"Chemical",
+            "8":"Material",
             "mi5":"Cse_dual",
             "mi4":"Ece_dual",
             "una1":"Cse_una",
             "una2":"Ece_una",
+            "una3":"IT_una",
             "0":"unknown"
     }
     if(branch in branch_data):

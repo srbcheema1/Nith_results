@@ -7,7 +7,7 @@ from sys import argv, exit
 
 from util.abs_path import abs_path
 from util.getter import get_year, get_branch, get_year, get_branch, get_branch_name
-from util.limits import default_no_of_std, iiitu_no_of_std, dual_no_of_std, base_year, get_class_set
+from util.limits import default_no_of_std, iiitu_no_of_std, dual_no_of_std, base_year, get_class_set, debug
 from util.srbColour import Colour
 from util.srbjson import extract_data, dump_data
 from util.string_constants import default_file_name
@@ -25,8 +25,9 @@ def sort_cgpa(std):
     return float(std.cgpa)
 
 std_map = {}
-def create_std_map():
-    data = extract_data(default_file_name)
+def create_std_map(file_name=default_file_name):
+    if(debug): print("created map "+file_name)
+    data = extract_data(file_name)
     data = data['Students']
     global std_map
     for item in data:
@@ -182,16 +183,16 @@ def full_college():
         print_data(year_data)
 
         sys.stdout = save_stdout
-        data.append(year_data)
+        data.extend(year_data)
 
     verify_folder(abs_path('./result/FULL_COLLEGE'))
     data.sort(key=sort_sgpa,reverse=True)
-    sys.stdout = open('result/FULL_COLLEGE/full_year_'+get_year(roll)+'_sgpi.txt','w')
+    sys.stdout = open('result/FULL_COLLEGE/full_college_sgpi.txt','w')
     print("sorting by sgpi....\n\n\n")
     print_data(data)
 
     data.sort(key=sort_cgpa,reverse=True)
-    sys.stdout = open('result/FULL_COLLEGE/full_year_'+get_year(roll)+'_cgpi.txt','w')
+    sys.stdout = open('result/FULL_COLLEGE/full_college_cgpi.txt','w')
     print("sorting by cgpi....\n\n\n")
     print_data(data)
 
@@ -205,7 +206,8 @@ if(__name__=="__main__"):
     parser = argparse.ArgumentParser()
     parser.add_argument("-d", "--dump", action="store_true", help="used to dump the output to json file")
     parser.add_argument("-c", "--cached", action="store_true", help="use cached_data from json file")
-    parser.add_argument("-f", "--file", default=default_file_name, help="name of json file")
+    parser.add_argument("-f", "--file", default=default_file_name, help="name of json file to be written")
+    parser.add_argument("-i", "--input", help="name of json file to be read")
 
     group = parser.add_mutually_exclusive_group()
     group.add_argument("-b", "--branch", action="store_true", help="full result of your branch")
@@ -230,8 +232,12 @@ if(__name__=="__main__"):
     print(std.get_result())
 
     default_file_name = args.file
+
     if(args.cached):
-        create_std_map()
+        if(args.input):
+            create_std_map(args.input)
+        else:
+            create_std_map(args.file)
         print('created map')
     if(args.branch):
         full_class(roll)
