@@ -99,7 +99,7 @@ def full_year(roll):
     for roll in classes:
         class_data = get_data(roll)
         branch_name = get_branch_name(get_branch(roll))
-        verify_folder(abs_path('./result/'+branch_name))
+        verify_folder(abs_path('./result/text/'+branch_name))
 
         class_data.sort(key=sort_sgpa,reverse=True)
         sys.stdout = open('result/text/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_sgpi.txt','w')
@@ -116,7 +116,7 @@ def full_year(roll):
         data.extend(class_data)
         sys.stdout = save_stdout
 
-    verify_folder(abs_path('./result/FULL_YEAR'))
+    verify_folder(abs_path('./result/text/FULL_YEAR'))
     data.sort(key=sort_sgpa,reverse=True)
     sys.stdout = open('result/text/FULL_YEAR/full_year_'+get_year(roll)+'_sgpi.txt','w')
     print("sorting by sgpi....\n\n\n")
