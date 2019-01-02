@@ -1,58 +1,8 @@
 import json
 
 from util.getter import get_curr_year
-from util.string_constants import cache_path
 
-from srblib import verify_file, abs_path
-
-def create_file(file_name):
-    template = {
-        "Students":[
-            # "roll_num":{
-                # "Name":"name_of_std",
-                # "Gender":"0",
-                # "Year":"0",
-                # "Rank_overall":"0",
-                # "Gender_rank":"0",
-                # "CGPI":"0",
-                # "SGPI":"0",
-                # "Points":"0",
-                # "Branch_name":"name_of_branch"
-            # }
-        ]
-    }
-    file_name = abs_path(file_name)
-    verify_file(file_name)
-    jfile = open(file_name, 'w')
-    json.dump(template,jfile,indent = 4,ensure_ascii = False)
-    jfile.close()
-
-
-def extract_data(file_name=cache_path):
-    """
-    Extracts json data from the given file
-    if there is no such file
-        it will create one
-    if there is currupt file
-        it will create new
-    if file is ok
-        it will return its content
-    """
-    file_name = abs_path(file_name)
-    try:
-        jfile = open(file_name)
-    except FileNotFoundError:
-        create_file(file_name)
-    jfile = open(file_name)
-    data = json.load(jfile)
-    print(data.keys())
-    print(data)
-    if(not 'Students' in data.keys()):
-        create_file(fille)
-        jfile = open(fille)
-        data = json.load(jfile)
-    return data
-
+from srblib import verify_file, abs_path, SrbJson
 
 def create_info_dict(rank,std):
     info = {}
@@ -69,46 +19,19 @@ def create_info_dict(rank,std):
     return info
 
 
-def create_info_list(rank,std):
-    info = []
-    info.append({"Rank":str(rank)})
-    info.append({"G_Rank":g_rank})
-    info.append({"Name":std.name})
-    info.append({"Rollno":std.roll_num})
-    info.append({"Gender":std.gender})
-    info.append({"Year":get_curr_year(std.roll_num)})
-    info.append({"Cgpa":std.cgpa})
-    info.append({"Sgpa":std.sgpa})
-    info.append({"Points":std.points})
-    info.append({"Branch_name":std.branch_name})
-    return info
-
-
-def write_data(data,file_name=cache_path):
-    """
-    Write RAW data into a json file
-    """
-    fille = abs_path(file_name)
-    jfile = open(fille, 'w')
-    json.dump(data,jfile,indent = 4,ensure_ascii = False)
-    jfile.close()
-
-
-def dump_data(data,file_name=cache_path):
+def dump_data(data,file_name):
     """
     take a LIST of Students and burn it into json file
     create RAW data from LIST
-    uses write_data
+    creates totally new file
     """
-    file_name = abs_path(file_name)
-    create_file(file_name) # creates new file from begining
-    dictt = extract_data(file_name)
-    print(dictt)
+    jfile = SrbJson(file_name,[])
+    jfile.data = []
+    jfile._burn_data_to_file() # force empty
     rank = 1
     for item in data:
         info = create_info_dict(rank,item)
-        # info = create_info_list(rank,item)
-        dictt['Students'].append(info)
+        jfile.data.append(info) # using jfile.data instead of jfile to speed up
         rank +=1
-    write_data(dictt,file_name)
+    jfile._burn_data_to_file() # required if we are using jfile.data
 

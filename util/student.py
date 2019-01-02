@@ -63,6 +63,8 @@ class Student:
             cgpa_ = res[2].text.strip()
             self.points = cgpa_.split("/")[0]
             self.cgpa = cgpa_.split("=")[1]
+        except KeyboardInterrupt:
+            raise KeyboardInterrupt
         except:
             self.name = '-'
             self.sgpa = self.points = self.cgpa = '0'
