@@ -40,7 +40,7 @@ class Student:
         self.g_rank = '0'
         self.gender = ''
 
-    def cached_data(self,name,gender,sgpa,cgpa,points,rank,g_rank):
+    def cached_data(self,name,gender,sgpa,cgpa,points,rank='0',g_rank='0'):
         self.name = name
         self.sgpa = sgpa
         self.cgpa = cgpa

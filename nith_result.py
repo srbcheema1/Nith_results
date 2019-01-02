@@ -5,15 +5,16 @@ import json
 import sys
 from sys import argv, exit
 
-from util.abs_path import abs_path
 from util.getter import get_year, get_branch, get_year, get_branch, get_branch_name
 from util.limits import default_no_of_std, iiitu_no_of_std, dual_no_of_std, base_year, get_class_set, debug
-from util.srbColour import Colour
 from util.srbjson import extract_data, dump_data
 from util.string_constants import cache_path
 from util.student import Student
-from util.files import verify_folder
 
+
+from srblib import Colour
+from srblib import abs_path
+from srblib import verify_folder
 
 def sort_sgpa(std):
     return float(std.sgpa)
@@ -27,8 +28,7 @@ def load_cache(file_name=cache_path):
     global std_map
     for item in data:
         std = Student(item['Rollno'])
-        std.cached_data(item['Name'],item['Gender'],item['Sgpa'] \
-            ,item['Cgpa'],item['Points'],item['Rank'],item['G_rank'])
+        std.cached_data(item['Name'],item['Gender'],item['Sgpa'],item['Cgpa'],item['Points'])
         std_map[item['Rollno']] = std
 
 
@@ -44,12 +44,18 @@ def get_data(roll):
     for i in range(a,b):
         roll = temp
         roll += "%02d"%(i)
-        print(Colour.GREEN+'Extracting '+roll+Colour.END)
+        Colour.print('Extracting '+roll,Colour.GREEN)
         if(roll in std_map):
             std = std_map[roll]
             if(std.name!='-' and std.cgpa!='0'):
                 data.append(std)
-                print('got chached data')
+                Colour.print('got chached '+roll,Colour.BLUE)
+            else:
+                Colour.print('Bad chached '+roll,Colour.BLUE)
+                std = Student(roll)
+                std.fetch_data()
+                if(std.name!='-' and std.cgpa!='0'):
+                    data.append(std)
         else:
             std = Student(roll)
             std.fetch_data()
@@ -75,21 +81,22 @@ def full_class(roll):
 
     save_stdout = sys.stdout
     branch_name = get_branch_name(get_branch(roll))
-    verify_folder(abs_path('./result/'+branch_name))
+    verify_folder(abs_path('./result/text/'+branch_name))
 
     data.sort(key=sort_sgpa,reverse=True)
-    sys.stdout = open('result/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_sgpi.txt','w')
+    sys.stdout = open('result/text/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_sgpi.txt','w')
     print("sorting by sgpi....\n\n\n")
     print_data(data)
+    dump_data(data,'result/json/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_sgpi.json')
 
     data.sort(key=sort_cgpa,reverse=True)
-    sys.stdout = open('result/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_cgpi.txt','w')
+    sys.stdout = open('result/text/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_cgpi.txt','w')
     print("sorting by cgpi....\n\n\n")
     print_data(data)
+    dump_data(data,'result/json/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_cgpi.json')
 
     sys.stdout = save_stdout
     print("written into files in result folder....\n\n")
-    dump_data(data,cache_path)
 
 
 def full_year(roll):
@@ -106,37 +113,40 @@ def full_year(roll):
         verify_folder(abs_path('./result/'+branch_name))
 
         class_data.sort(key=sort_sgpa,reverse=True)
-        sys.stdout = open('result/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_sgpi.txt','w')
+        sys.stdout = open('result/text/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_sgpi.txt','w')
         print("sorting by sgpi....\n\n\n")
         print_data(class_data)
+        dump_data(class_data,'result/json/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_sgpi.json')
 
         class_data.sort(key=sort_cgpa,reverse=True)
-        sys.stdout = open('result/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_cgpi.txt','w')
+        sys.stdout = open('result/text/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_cgpi.txt','w')
         print("sorting by cgpi....\n\n\n")
         print_data(class_data)
+        dump_data(class_data,'result/json/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_cgpi.json')
 
         data.extend(class_data)
         sys.stdout = save_stdout
 
     verify_folder(abs_path('./result/FULL_YEAR'))
     data.sort(key=sort_sgpa,reverse=True)
-    sys.stdout = open('result/FULL_YEAR/full_year_'+get_year(roll)+'_sgpi.txt','w')
+    sys.stdout = open('result/text/FULL_YEAR/full_year_'+get_year(roll)+'_sgpi.txt','w')
     print("sorting by sgpi....\n\n\n")
     print_data(data)
+    dump_data(data,'result/json/FULL_YEAR/full_year_'+get_year(roll)+'_sgpi.json')
 
     data.sort(key=sort_cgpa,reverse=True)
-    sys.stdout = open('result/FULL_YEAR/full_year_'+get_year(roll)+'_cgpi.txt','w')
+    sys.stdout = open('result/text/FULL_YEAR/full_year_'+get_year(roll)+'_cgpi.txt','w')
     print("sorting by cgpi....\n\n\n")
     print_data(data)
+    dump_data(data,'result/json/FULL_YEAR/full_year_'+get_year(roll)+'_cgpi.json')
 
     sys.stdout = save_stdout
     print("written into files in result folder....\n\n")
-    dump_data(data,cache_path)
 
 def full_college():
     load_cache(cache_path)
     data=[]
-    by = base_year
+    by = base_year # prefix of first year
     roll_set = []
     for b in range(0,4):
         roll_set.append(str(by-b)+'mi535')
@@ -146,55 +156,59 @@ def full_college():
         year_data=[]
         y = get_year(roll)
         classes = get_class_set(y)
-        verify_folder(abs_path('./result'))
 
         for roll in classes:
             class_data = get_data(roll)
             branch_name = get_branch_name(get_branch(roll))
-            verify_folder(abs_path('./result/'+branch_name))
+            verify_folder(abs_path('./result/text/'+branch_name))
 
             class_data.sort(key=sort_sgpa,reverse=True)
-            sys.stdout = open('result/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_sgpi.txt','w')
+            sys.stdout = open('result/text/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_sgpi.txt','w')
             print("sorting by sgpi....\n\n\n")
             print_data(class_data)
+            dump_data(class_data,'result/json/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_sgpi.json')
 
             class_data.sort(key=sort_cgpa,reverse=True)
             sys.stdout = open('result/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_cgpi.txt','w')
             print("sorting by cgpi....\n\n\n")
             print_data(class_data)
+            dump_data(class_data,'result/json/'+branch_name+'/'+branch_name+'_'+get_year(roll)+'_cgpi.json')
 
             year_data.extend(class_data)
             sys.stdout = save_stdout
 
-        verify_folder(abs_path('./result/FULL_YEAR'))
+        verify_folder(abs_path('./result/text/FULL_YEAR'))
 
         year_data.sort(key=sort_sgpa,reverse=True)
-        sys.stdout = open('result/FULL_YEAR/full_year_'+get_year(roll)+'_sgpi.txt','w')
+        sys.stdout = open('result/text/FULL_YEAR/full_year_'+get_year(roll)+'_sgpi.txt','w')
         print("sorting by sgpi....\n\n\n")
         print_data(year_data)
+        dump_data(year_data,'result/json/FULL_YEAR/full_year_'+get_year(roll)+'_sgpi.json')
 
         year_data.sort(key=sort_cgpa,reverse=True)
-        sys.stdout = open('result/FULL_YEAR/full_year_'+get_year(roll)+'_cgpi.txt','w')
+        sys.stdout = open('result/text/FULL_YEAR/full_year_'+get_year(roll)+'_cgpi.txt','w')
         print("sorting by cgpi....\n\n\n")
         print_data(year_data)
+        dump_data(year_data,'result/json/FULL_YEAR/full_year_'+get_year(roll)+'_cgpi.json')
 
         sys.stdout = save_stdout
         data.extend(year_data)
 
-    verify_folder(abs_path('./result/FULL_COLLEGE'))
+    verify_folder(abs_path('./result/text/FULL_COLLEGE'))
     data.sort(key=sort_sgpa,reverse=True)
-    sys.stdout = open('result/FULL_COLLEGE/full_college_sgpi.txt','w')
+    sys.stdout = open('result/text/FULL_COLLEGE/full_college_sgpi.txt','w')
     print("sorting by sgpi....\n\n\n")
     print_data(data)
+    dump_data(data,'result/text/FULL_COLLEGE/full_college_sgpi.json')
 
     data.sort(key=sort_cgpa,reverse=True)
-    sys.stdout = open('result/FULL_COLLEGE/full_college_cgpi.txt','w')
+    sys.stdout = open('result/text/FULL_COLLEGE/full_college_cgpi.txt','w')
     print("sorting by cgpi....\n\n\n")
     print_data(data)
+    dump_data(data,'result/text/FULL_COLLEGE/full_college_cgpi.json')
 
     sys.stdout = save_stdout
     print("written into files in result folder....\n\n")
-    dump_data(data,cache_path)
 
 
 if(__name__=="__main__"):
@@ -211,10 +225,13 @@ if(__name__=="__main__"):
     std.fetch_data()
     print(std.get_result())
 
-    if(args.branch):
-        full_class(roll)
-    if(args.year):
-        full_year(roll)
-    if(args.all):
-        full_college()
-    print(Colour.PURPLE+'A script by srbcheema1'+Colour.END)
+    try:
+        if(args.branch):
+            full_class(roll)
+        if(args.year):
+            full_year(roll)
+        if(args.all):
+            full_college()
+    except KeyboardInterrupt:
+        Colour.print('Exiting on KeyboardInterrupt ...',Colour.YELLOW)
+    Colour.print('A script by srbcheema1',Colour.PURPLE)

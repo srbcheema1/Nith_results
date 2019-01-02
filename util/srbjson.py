@@ -1,10 +1,11 @@
 import json
 
 from util.getter import get_curr_year
-from util.abs_path import abs_path
 from util.string_constants import cache_path
 
-def create_file(fille):
+from srblib import verify_file, abs_path
+
+def create_file(file_name):
     template = {
         "Students":[
             # "roll_num":{
@@ -20,7 +21,9 @@ def create_file(fille):
             # }
         ]
     }
-    jfile = open(fille, 'w')
+    file_name = abs_path(file_name)
+    verify_file(file_name)
+    jfile = open(file_name, 'w')
     json.dump(template,jfile,indent = 4,ensure_ascii = False)
     jfile.close()
 
