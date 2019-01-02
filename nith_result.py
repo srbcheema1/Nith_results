@@ -10,13 +10,9 @@ from util.getter import get_year, get_branch, get_year, get_branch, get_branch_n
 from util.limits import default_no_of_std, iiitu_no_of_std, dual_no_of_std, base_year, get_class_set, debug
 from util.srbColour import Colour
 from util.srbjson import extract_data, dump_data
-from util.string_constants import default_file_name
+from util.string_constants import cache_path
 from util.student import Student
 from util.files import verify_folder
-
-
-# dump switches
-dump_it = False
 
 
 def sort_sgpa(std):
@@ -25,8 +21,7 @@ def sort_cgpa(std):
     return float(std.cgpa)
 
 std_map = {}
-def create_std_map(file_name=default_file_name):
-    if(debug): print("created map "+file_name)
+def load_cache(file_name=cache_path):
     data = extract_data(file_name)
     data = data['Students']
     global std_map
@@ -73,6 +68,7 @@ def print_data(data):
         rank +=1
 
 def full_class(roll):
+    load_cache(cache_path)
     data=[]
     data.extend(get_data(roll))
     print_data(data)
@@ -93,11 +89,11 @@ def full_class(roll):
 
     sys.stdout = save_stdout
     print("written into files in result folder....\n\n")
-    if(dump_it):
-        dump_data(data,default_file_name)
+    dump_data(data,cache_path)
 
 
 def full_year(roll):
+    load_cache(cache_path)
     data=[]
     y = get_year(roll)
     classes = get_class_set(y)
@@ -135,10 +131,10 @@ def full_year(roll):
 
     sys.stdout = save_stdout
     print("written into files in result folder....\n\n")
-    if(dump_it):
-        dump_data(data,default_file_name)
+    dump_data(data,cache_path)
 
 def full_college():
+    load_cache(cache_path)
     data=[]
     by = base_year
     roll_set = []
@@ -198,47 +194,23 @@ def full_college():
 
     sys.stdout = save_stdout
     print("written into files in result folder....\n\n")
-    if(dump_it):
-        dump_data(data,default_file_name)
+    dump_data(data,cache_path)
 
 
 if(__name__=="__main__"):
     parser = argparse.ArgumentParser()
-    parser.add_argument("-d", "--dump", action="store_true", help="used to dump the output to json file")
-    parser.add_argument("-c", "--cached", action="store_true", help="use cached_data from json file")
-    parser.add_argument("-f", "--file", default=default_file_name, help="name of json file to be written")
-    parser.add_argument("-i", "--input", help="name of json file to be read")
-
     group = parser.add_mutually_exclusive_group()
     group.add_argument("-b", "--branch", action="store_true", help="full result of your branch")
     group.add_argument("-y", "--year", action="store_true", help="full result of your year")
     group.add_argument("-a", "--all", action="store_true", help="full result of college")
-
-    parser.add_argument("-r", "--roll", help="ROLL number eg:- 15mi535")
+    parser.add_argument("roll",nargs=1,help="your roll number")
     args = parser.parse_args()
 
-    if(args.dump):
-        dump_it = True
-
-    if(args.roll):
-        roll = args.roll
-    else:
-        roll = input('Enter your roll number : ')
-        print('use: python3 nith_results.py -h for help')
-
-    roll = roll.lower()
+    roll = args.roll[0].lower()
     std = Student(roll)
     std.fetch_data()
     print(std.get_result())
 
-    default_file_name = args.file
-
-    if(args.cached):
-        if(args.input):
-            create_std_map(args.input)
-        else:
-            create_std_map(args.file)
-        print('created map')
     if(args.branch):
         full_class(roll)
     if(args.year):

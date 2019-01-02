@@ -2,7 +2,7 @@ import json
 
 from util.getter import get_curr_year
 from util.abs_path import abs_path
-from util.string_constants import default_file_name
+from util.string_constants import cache_path
 
 def create_file(fille):
     template = {
@@ -25,7 +25,7 @@ def create_file(fille):
     jfile.close()
 
 
-def extract_data(file_name=default_file_name):
+def extract_data(file_name=cache_path):
     """
     Extracts json data from the given file
     if there is no such file
@@ -35,13 +35,15 @@ def extract_data(file_name=default_file_name):
     if file is ok
         it will return its content
     """
-    fille = abs_path(file_name)
+    file_name = abs_path(file_name)
     try:
-        jfile = open(fille)
+        jfile = open(file_name)
     except FileNotFoundError:
-        create_file(fille)
-    jfile = open(fille)
+        create_file(file_name)
+    jfile = open(file_name)
     data = json.load(jfile)
+    print(data.keys())
+    print(data)
     if(not 'Students' in data.keys()):
         create_file(fille)
         jfile = open(fille)
@@ -79,7 +81,7 @@ def create_info_list(rank,std):
     return info
 
 
-def write_data(data,file_name=default_file_name):
+def write_data(data,file_name=cache_path):
     """
     Write RAW data into a json file
     """
@@ -89,15 +91,16 @@ def write_data(data,file_name=default_file_name):
     jfile.close()
 
 
-def dump_data(data,file_name=default_file_name):
+def dump_data(data,file_name=cache_path):
     """
     take a LIST of Students and burn it into json file
     create RAW data from LIST
     uses write_data
     """
-    fille = abs_path(file_name)
-    create_file(fille)
-    dictt = extract_data()
+    file_name = abs_path(file_name)
+    create_file(file_name) # creates new file from begining
+    dictt = extract_data(file_name)
+    print(dictt)
     rank = 1
     for item in data:
         info = create_info_dict(rank,item)

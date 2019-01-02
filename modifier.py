@@ -3,7 +3,7 @@
 from util.student import Student
 from util.abs_path import abs_path
 from util.srbjson import extract_data, write_data, create_info_dict, create_file
-from util.string_constants import default_file_name
+from util.string_constants import cache_path
 
 def edit_gender(std):
     if(std.gender == 'b' or std.gender == 'g'):
@@ -19,7 +19,7 @@ def edit_gender(std):
     return 'u'
 
 
-def modifier(file_name=default_file_name):
+def modifier(file_name=cache_path):
     data = extract_data()
     data = data['Students']
     for i in range(len(data)):

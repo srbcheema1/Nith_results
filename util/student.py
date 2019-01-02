@@ -51,9 +51,10 @@ class Student:
 
     def fetch_data(self):
         try:
-            url = "http://14.139.56.15/"+self.c_id+self.year+"/studentresult/details.asp"
+            # url = "http://14.139.56.15/"+self.c_id+self.year+"/studentresult/details.asp"
+            url = "http://59.144.74.15/"+self.c_id+self.year+"/studentresult/details.asp"
             page = requests.post(url,data={'RollNumber':self.roll_num},proxies=Student.proxyDict,verify=False)
-            soup = BeautifulSoup(page.text,'lxml')
+            soup = BeautifulSoup(page.text,'html.parser')
             self.all_data = soup.find_all(class_='ewTable')
             self.name=self.all_data[0].find_all('tr')[0].find_all('td')[1].text.strip()
             self.name=self.name.upper()

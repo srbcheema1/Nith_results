@@ -1,10 +1,21 @@
 # set base_year as year of 1st year students
-base_year = 17
-debug = False
+from srblib import SrbJson
+from srblib import debug
 
-default_no_of_std = 99
-iiitu_no_of_std = 60
-dual_no_of_std = 65
+_limits_template = \
+{
+    'base_year' : 18,
+    'default_no_of_std' : 99,
+    'iiitu_no_of_std' : 60,
+    'dual_no_of_std' : 65,
+}
+
+_limits = SrbJson('~/.config/nith_results/limits.json',_limits_template)
+
+base_year = _limits['base_year']
+default_no_of_std = _limits['default_no_of_std']
+iiitu_no_of_std = _limits['iiitu_no_of_std']
+dual_no_of_std = _limits['dual_no_of_std']
 
 if (debug):
     default_no_of_std = 4

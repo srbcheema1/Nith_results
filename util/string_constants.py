@@ -1,1 +1,1 @@
-default_file_name = './results.json'
+cache_path = '~/.config/nith_results/cache.json'
