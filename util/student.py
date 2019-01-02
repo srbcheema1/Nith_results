@@ -83,3 +83,13 @@ class Student:
             + Colour.END
         return out
 
+    def get_cache(self):
+        dictt = {}
+        dictt['Rollno'] = self.roll_num
+        dictt['Name'] = self.name
+        dictt['Gender'] = self.gender
+        dictt['Sgpa'] = self.sgpa
+        dictt['Cgpa'] = self.cgpa
+        dictt['Points'] = self.points
+        return dictt
+

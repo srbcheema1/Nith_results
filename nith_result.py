@@ -12,8 +12,9 @@ from util.string_constants import cache_path
 from util.student import Student
 
 
-from srblib import Colour
 from srblib import abs_path
+from srblib import Colour
+from srblib import SrbJson
 from srblib import verify_folder
 
 def sort_sgpa(std):
@@ -21,18 +22,9 @@ def sort_sgpa(std):
 def sort_cgpa(std):
     return float(std.cgpa)
 
-std_map = {}
-def load_cache(file_name=cache_path):
-    data = extract_data(file_name)
-    data = data['Students']
-    global std_map
-    for item in data:
-        std = Student(item['Rollno'])
-        std.cached_data(item['Name'],item['Gender'],item['Sgpa'],item['Cgpa'],item['Points'])
-        std_map[item['Rollno']] = std
-
 
 def get_data(roll):
+    cache = SrbJson(cache_path,template={"nith_results":{}}) # load cache
     data=[]
     temp = roll[:-2]
     a,b = 1,default_no_of_std
@@ -45,22 +37,21 @@ def get_data(roll):
         roll = temp
         roll += "%02d"%(i)
         Colour.print('Extracting '+roll,Colour.GREEN)
-        if(roll in std_map):
-            std = std_map[roll]
+        if(roll in cache):
+            item = cache[roll]
+            std = Student(item['Rollno'])
+            std.cached_data(item['Name'],item['Gender'],item['Sgpa'],item['Cgpa'],item['Points'])
             if(std.name!='-' and std.cgpa!='0'):
                 data.append(std)
                 Colour.print('got chached '+roll,Colour.BLUE)
             else:
                 Colour.print('Bad chached '+roll,Colour.BLUE)
-                std = Student(roll)
-                std.fetch_data()
-                if(std.name!='-' and std.cgpa!='0'):
-                    data.append(std)
         else:
             std = Student(roll)
             std.fetch_data()
             if(std.name!='-' and std.cgpa!='0'):
                 data.append(std)
+                cache[std.roll_num] = std.get_cache()
 
     return data
 
@@ -74,7 +65,6 @@ def print_data(data):
         rank +=1
 
 def full_class(roll):
-    load_cache(cache_path)
     data=[]
     data.extend(get_data(roll))
     print_data(data)
@@ -100,7 +90,6 @@ def full_class(roll):
 
 
 def full_year(roll):
-    load_cache(cache_path)
     data=[]
     y = get_year(roll)
     classes = get_class_set(y)
@@ -144,7 +133,6 @@ def full_year(roll):
     print("written into files in result folder....\n\n")
 
 def full_college():
-    load_cache(cache_path)
     data=[]
     by = base_year # prefix of first year
     roll_set = []
