@@ -11,7 +11,7 @@
  * Steps to Use
 
    * Clone this repo using `git clone https://github.com/srbcheema1/Nith_results`.
-   * Create virtual environment (optional) using `python3 -m venv env`. To activate the virtual environment, use `source env/bin/activate`, `deactivate` to deactivate. 
+   * Create virtual environment (optional) using `python3 -m venv env`. To activate the virtual environment, use `source env/bin/activate`, `deactivate` to deactivate.
    * Install the requirements using `pip3 install -r requirements.txt`.
    * Now run the command `python3 nith_results.py -h`.
    * Example `python3 nith_results.py -cydr 15mi535`.
