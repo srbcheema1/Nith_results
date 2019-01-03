@@ -1,7 +1,3 @@
-import json
-
-from util.getter import get_curr_year
-
 from srblib import verify_file, abs_path, SrbJson
 
 def create_info_dict(rank,std):
@@ -11,11 +7,11 @@ def create_info_dict(rank,std):
     info['Name'] = std.name
     info['Rollno'] = std.roll_num
     info['Gender'] = std.gender
-    info['Year'] = get_curr_year(std.roll_num)
+    info['Year'] = std.year
     info['Cgpa'] = std.cgpa
     info['Sgpa'] = std.sgpa
     info['Points'] = std.points
-    info['Branch_name'] = std.branch_name
+    info['Branch'] = std.branch
     return info
 
 
@@ -35,3 +31,14 @@ def dump_data(data,file_name):
         rank +=1
     jfile._burn_data_to_file() # required if we are using jfile.data
 
+
+def write_data(data,fout):
+    dump_data(data,'result/json/'+fout+'.json')
+    out = ""
+    rank = 1
+    for item in data:
+        out+=str(rank)+" "+item.get_result()+"\n\n"
+        rank+=1
+    fout = abs_path('result/text/' + fout + '.txt')
+    verify_file(fout)
+    open(fout,'w').write(out)
