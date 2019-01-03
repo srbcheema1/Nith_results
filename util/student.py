@@ -52,7 +52,7 @@ class Student:
                 Colour.print('got chached '+self.roll_num,Colour.BLUE)
                 return self.get_cache()
             else:
-                Colour.print('Bad chached '+roll,Colour.BLUE)
+                Colour.print('Bad chached '+self.roll_num,Colour.YELLOW)
 
         url = "http://59.144.74.15/"+Student.get_c_id(self.roll_num)+self.batch+"/studentresult/details.asp"
         try:
