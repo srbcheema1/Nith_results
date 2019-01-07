@@ -1,14 +1,22 @@
 #!/usr/bin/env python3
+# PYTHON_ARGCOMPLETE_OK
 
-import argparse
+import os
 import sys
-from sys import argv, exit
 
+from srblib import show_dependency_error_and_exit
 from srblib import SrbJson, debug, Colour, abs_path
+
+try:
+    import argparse
+    from argcomplete import autocomplete
+except:
+    show_dependency_error_and_exit()
 
 from .constants import default_no_of_std, iiitu_no_of_std, dual_no_of_std, base_year, get_branch_set, max_seats
 from .output import write_data
 from .student import Student
+from . import __version__, __mod_name__
 
 
 def sort_sgpa(std):
@@ -103,14 +111,26 @@ def full_college():
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument("-v","--version",action='store_true',help='Display version number')
     group = parser.add_mutually_exclusive_group()
     group.add_argument("-b", "--branch", action="store_true", help="full result of your branch")
     group.add_argument("-y", "--year", action="store_true", help="full result of your year")
     group.add_argument("-a", "--all", action="store_true", help="full result of college")
-    parser.add_argument("roll",nargs=1,help="your roll number")
+    # parser.add_argument("roll",nargs=1,help="your roll number") # this is for exactly one, it returns array of 1 elem
+    parser.add_argument("roll",nargs='?',help="your roll number") # this is for one or none, it doesnot return array
+
+    autocomplete(parser)
     args = parser.parse_args()
 
-    roll = args.roll[0].lower()
+    if(args.version):
+        print(__mod_name__+'=='+__version__)
+        sys.exit()
+
+    if(args.roll):
+        roll = args.roll.lower()
+        print(roll)
+    else:
+        roll = input('Enter your roll number : ')
     std = Student(roll)
     std.fetch_data()
     print(std)

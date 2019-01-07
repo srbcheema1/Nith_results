@@ -1,4 +1,16 @@
+# python compiled files
 *.pyc
-__*
-venv
-env
+
+# dist and builds
+dist/
+build/
+
+# eggs
+*.egg-info
+*.egg
+
+# virtual environments
+venv/
+env/
+venv3/
+
