@@ -2,7 +2,7 @@ import requests
 from os import environ
 from bs4 import BeautifulSoup
 
-from util.constants import cache_path, base_year
+from .constants import cache_path, base_year
 
 from srblib import Colour, SrbJson, debug, Tabular
 
