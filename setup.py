@@ -2,7 +2,7 @@
 import os
 from setuptools import setup, find_packages
 
-from nith_result import __version__, __mod_name__
+from nith_results import __version__, __mod_name__
 
 with open("README.md", 'r') as f:
     long_description = f.read()

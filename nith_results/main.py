@@ -11,6 +11,7 @@ try:
     import argparse
     from argcomplete import autocomplete
 except:
+    raise # till next release of srblib
     show_dependency_error_and_exit()
 
 from .constants import default_no_of_std, iiitu_no_of_std, dual_no_of_std, base_year, get_branch_set, max_seats
