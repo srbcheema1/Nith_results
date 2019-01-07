@@ -1,6 +1,6 @@
 # set base_year as year of 1st year students
 from srblib import SrbJson
-from srblib import debug
+from srblib import debug, on_travis
 
 
 cache_path = '~/.config/nith_results/cache.json'
@@ -18,7 +18,8 @@ _limits = SrbJson('~/.config/nith_results/limits.json',_limits_template)
 
 base_year = _limits['base_year']
 if(not base_year):
-    base_year = input('Please enter base-year(year of 1st year student right now) ex:18')
+    if on_travis: base_year = 18
+    else: base_year = input('Please enter base-year(year of 1st year student right now) ex:18 ')
     _limits['base_year'] = base_year
 
 default_no_of_std = _limits['default_no_of_std']
