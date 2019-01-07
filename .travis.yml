@@ -19,3 +19,12 @@ script:
   - nith_results --version
   - pytest
 
+deploy:
+  provider: pypi
+  user: srbcheema1
+  on:
+    tags: true
+  distributions: "sdist bdist_wheel"
+  skip_existing: true
+  password:
+      secure: "psnSwkHf1iHi8vbMZZgz58ZZydpBKBwnwbRMtjfu/C4fAsGMR6+3mdulZ522spcjyrZQbgk12/BgOyCGwH+InAaVSCCb/GPaQlaQvGzjtmi38GRSj+7dAw7aH6dxBh67ZWjzr148o+8bx8uGaQU9KmEcIVVgLZQRVGI1UaLE7w4zpSFgOyRSsqp8G67GusMZyM+ZdazxEEDexcRr4JH66Ixxyk9vZaiBzJaxqSbeHG0a46CJg62rhn/iGZSEsAN6JmHFmiE7KEcwT/Gvxw+vzTPhvegUbN9x1jue/kqxNXlvh0AGt0HNUpnSf6XVKtLuSlBH3W0pOCT/FYbaaInH3Te8gH7mRoWy6YNVn7HTJSma/VF0VVsW5XGkkWOAw44AxJ+avkYKNhNCd695wvJmGQnFT4PI2e5QCPzZf6QFZNLmGwlmOMkDymVXJG2cw4DueUCK1glaOskKatp3Uf/5+RTUP0MIOT3ucRsjD0V/MYdeavYEA0WlZIcG5x25zL5n/EQ0SYJHW4vwOJ+Ja5Cfd6y/DxjN2nVvhvtisxA3fZ5ARUSVuIW00OdqUmncdZY7hpWr72rkkYUYmprj7cupke/fMuCkbMUf0rlp6et4EnjCmXJ2d7ZawatyqDNQ9aQe8kMemC6twPwatfwLf/lsJho0De2/tyPbYikYCw4QDy0="
