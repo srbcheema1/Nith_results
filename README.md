@@ -60,7 +60,7 @@ python3 setup.py sdist
 [![Facebook](https://raw.githubusercontent.com/srbcheema1/CheemaFy/master/myPlugins/extra_things/png_images/social/fb.png)](https://www.facebook.com/srbcheema/)
 
 
-### Development by
+### Developed by
 
 Developer / Author: [Srb Cheema](https://github.com/srbcheema1/)
 
