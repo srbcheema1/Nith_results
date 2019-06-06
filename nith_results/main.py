@@ -14,7 +14,8 @@ except:
     raise # till next release of srblib
     show_dependency_error_and_exit()
 
-from .constants import default_no_of_std, iiitu_no_of_std, dual_no_of_std, base_year, get_branch_set, max_seats
+from .constants import default_no_of_std, iiitu_no_of_std, dual_no_of_std, base_year
+from .constants import get_branch_set, max_seats, get_branch_set_mtech
 from .output import write_data
 from .student import Student
 from . import __version__, __mod_name__
@@ -25,7 +26,7 @@ def sort_sgpa(std):
 def sort_cgpa(std):
     return float(std.cgpa)
 
-def get_branch_list(roll):
+def get_branch_list(roll,mtech=False):
     miss = 0
     max_miss = 5
     data=[]
@@ -35,7 +36,7 @@ def get_branch_list(roll):
         if(roll[2]=='m'): b=dual_no_of_std
         temp = roll[:-2]
         for i in range(a,b):
-            std = Student(temp+"%02d"%(i))
+            std = Student(temp+"%02d"%(i),mtech)
             ret = std.fetch_data()
             if(ret):
                 data.append(std)
@@ -48,7 +49,7 @@ def get_branch_list(roll):
     if(int(roll[3]) >= 5): base_int = int(roll[:3])*1000 + 500 # 185535
     else: base_int = int(roll[:3])*1000 # 185535
     for i in range(1,max_seats):
-        std = Student(str(base_int+i))
+        std = Student(str(base_int+i),mtech)
         ret = std.fetch_data()
         if(ret):
             data.append(std)
@@ -91,7 +92,7 @@ def full_year(roll):
     return data
 
 
-def full_college():
+def full_btech():
     data=[]
     by = base_year # prefix of first year
     for b in range(0,4):
@@ -109,6 +110,43 @@ def full_college():
 
     return data
 
+def full_class_mtech(roll):
+    branch = Student.get_branch(roll)
+    batch = Student.get_batch(roll)
+    data= get_branch_list(roll,mtech=True)
+
+    data.sort(key=sort_sgpa,reverse=True)
+    fout = branch+'/batch_'+batch+'_mtech_sgpi'
+    write_data(data,fout)
+
+    data.sort(key=sort_cgpa,reverse=True)
+    fout = branch+'/batch_'+batch+'_mtech_cgpi'
+    write_data(data,fout)
+
+    return data
+
+def full_year_mtech(roll):
+    data=[]
+    batch = Student.get_batch(roll)
+    for roll in get_branch_set_mtech(roll):
+        data.extend(full_class_mtech(roll))
+
+    return data
+
+def full_mtech():
+    data=[]
+    by = base_year # prefix of first year
+    for b in range(3,5):
+        temp_roll = str(by-b) + 'mi535'
+        if(by-b >= 18): temp_roll = str(by-b) + '5535'
+        data.extend(full_year_mtech(temp_roll))
+
+    return data
+
+def full_college():
+    full_btech()
+    full_mtech()
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -117,6 +155,7 @@ def main():
     group.add_argument("-b", "--branch", action="store_true", help="full result of your branch")
     group.add_argument("-y", "--year", action="store_true", help="full result of your year")
     group.add_argument("-a", "--all", action="store_true", help="full result of college")
+    group.add_argument("-m", "--mtech", action="store_true", help="result of dual degree mtech")
     # parser.add_argument("roll",nargs=1,help="your roll number") # this is for exactly one, it returns array of 1 elem
     parser.add_argument("roll",nargs='?',help="your roll number") # this is for one or none, it doesnot return array
 
@@ -132,6 +171,8 @@ def main():
         print(roll)
     else:
         roll = input('Enter your roll number : ')
+        if roll == '':
+            roll = '15mi535'
     std = Student(roll)
     std.fetch_data()
     print(std)
@@ -143,7 +184,9 @@ def main():
             full_year(roll)
         if(args.all):
             full_college()
-        if(args.all or args.branch or args.year):
+        if(args.mtech):
+            full_mtech()
+        if(args.all or args.branch or args.year or args.mtech):
             Colour.print("written into files in result folder....\n\n",Colour.GREEN)
     except KeyboardInterrupt:
         Colour.print('Exiting on KeyboardInterrupt ...',Colour.YELLOW)

@@ -16,8 +16,9 @@ class Student:
     except KeyError:
         proxyDict = None
 
-    def __init__(self,roll):
+    def __init__(self,roll,mtech=False):
         self.roll_num = str(roll)
+        self.unique_id = str(roll) + ('_mtech' if mtech else '') # one can have 2 unique ids one for btech other for mtech
 
         self.batch = Student.get_batch(roll)
         self.year = Student.get_year(roll)
@@ -33,6 +34,8 @@ class Student:
         self.g_rank = '0' # genderwise rank
         self.gender = '' # gender
 
+        self.mtech = mtech # if student is of mtech
+
 
     def set_cached_data(self,name,gender,sgpa,cgpa,points,rank='0',g_rank='0'):
         self.name = name
@@ -45,16 +48,16 @@ class Student:
 
     def fetch_data(self):
         cache = SrbJson(cache_path,template={"nith_results":{}}) # load cache
-        if(self.roll_num in cache):
-            item = cache[self.roll_num]
+        if(self.unique_id in cache):
+            item = cache[self.unique_id]
             self.set_cached_data(item['Name'],item['Gender'],item['Sgpa'],item['Cgpa'],item['Points'])
             if(self.name!='-' and self.cgpa!='0'):
-                Colour.print('got chached '+self.roll_num,Colour.BLUE)
+                Colour.print('got cached '+self.unique_id,Colour.BLUE)
                 return self.get_cache()
             else:
-                Colour.print('Bad chached '+self.roll_num,Colour.YELLOW)
+                Colour.print('Bad cached '+self.unique_id,Colour.YELLOW)
 
-        url = "http://59.144.74.15/"+Student.get_c_id(self.roll_num)+self.batch+"/studentresult/details.asp"
+        url = "http://59.144.74.15/"+Student.get_c_id(self.roll_num,self.mtech)+self.batch+"/studentresult/details.asp"
         try:
             page = requests.post(url,data={'RollNumber':self.roll_num},proxies=Student.proxyDict,verify=False)
             soup = BeautifulSoup(page.text,'html.parser')
@@ -67,15 +70,15 @@ class Student:
                 cgpa_ = res[2].text.strip()
                 self.points = cgpa_.split("/")[0]
                 self.cgpa = cgpa_.split("=")[1]
-                cache[self.roll_num] = self.get_cache() # store cache
-                Colour.print('fetched successfully '+self.roll_num,Colour.BLUE)
+                cache[self.unique_id] = self.get_cache() # store cache
+                Colour.print('fetched successfully '+self.unique_id,Colour.BLUE)
                 return self.get_cache()
             except KeyboardInterrupt:
                 raise KeyboardInterrupt
             except:
                 self.name = '-'
                 self.sgpa = self.points = self.cgpa = '0'
-                Colour.print('Unable to parse, ' + self.roll_num, Colour.RED)
+                Colour.print('Unable to parse, ' + self.unique_id, Colour.RED)
                 if(debug):
                     Colour.print('possibly roll number doesnot exist or site design changed\n' +
                     'contact srbcheema2@gmail.com in case the roll number is availabe on site',Colour.RED)
@@ -148,7 +151,9 @@ class Student:
         return college
 
     @staticmethod
-    def get_c_id(roll): # working with new one
+    def get_c_id(roll,mtech=False): # working with new one
+        if mtech:
+            return "dualdegree"
         roll = str(roll)
         if(roll[0]=='i'):#iitu
             c_id="iiituna"

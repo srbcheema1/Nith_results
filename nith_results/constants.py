@@ -72,3 +72,27 @@ def get_branch_set(roll):
                 ],
             }
     return classes_set[y]
+
+def get_branch_set_mtech(roll):
+    def get_batch(roll): # working with new one
+        roll = str(roll)
+        if(roll[0]=='i'):#iitu
+            year = roll[5:7]
+        else:
+            year = roll[0:2]
+        return year
+    y = get_batch(roll)
+    if(int(y) >= 18): # new style
+        return [
+            y+'4501',y+'5501'
+        ]
+
+    if(int(y)>=15):
+        return [
+            y+'mi501',y+'mi401'
+        ]
+
+    if(int(y)==14):
+        return[y+'mi501']
+
+    return []
