@@ -8,6 +8,8 @@
 
 **Nith_results** is a terminal app to extract result of NITH.
 
+You can also visit [website](https://rohitkaushal7.github.io/nith-results/) built over data extracted using this tool.
+
 
 ### Installation
 
@@ -63,4 +65,8 @@ python3 setup.py sdist
 ### Developed by
 
 Developer / Author: [Srb Cheema](https://github.com/srbcheema1/)
+
+### Special Thanks
+
+Special thanks to [Rohit Kaushal](https://github.com/RohitKaushal7) for building [web-interface](https://rohitkaushal7.github.io/nith-results/) for this data.
 
