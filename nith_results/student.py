@@ -2,7 +2,7 @@ import requests
 from os import environ
 from bs4 import BeautifulSoup
 
-from .constants import cache_path, base_year
+from .constants import cache_path, base_year, base_url
 
 from srblib import Colour, SrbJson, debug, Tabular
 
@@ -57,7 +57,7 @@ class Student:
             else:
                 Colour.print('Bad cached '+self.unique_id,Colour.YELLOW)
 
-        url = "http://59.144.74.15/"+Student.get_c_id(self.roll_num,self.mtech)+self.batch+"/studentresult/details.asp"
+        url = "http://" +base_url+ "/"+Student.get_c_id(self.roll_num,self.mtech)+self.batch+"/studentresult/details.asp"
         try:
             page = requests.post(url,data={'RollNumber':self.roll_num},proxies=Student.proxyDict,verify=False)
             soup = BeautifulSoup(page.text,'html.parser')

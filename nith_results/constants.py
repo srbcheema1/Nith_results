@@ -12,15 +12,22 @@ _limits_template = \
     'iiitu_no_of_std' : 70,
     'dual_no_of_std' : 70,
     'max_seats' : 120,
+		'base_url': ""
 }
 
 _limits = SrbJson('~/.config/nith_results/limits.json',_limits_template)
 
 base_year = _limits['base_year']
+base_url = _limits['base_url']
 if(not base_year):
-    if on_travis: base_year = 18
-    else: base_year = input('Please enter base-year(year of 1st year student right now) ex:18 ')
+    if on_travis: base_year = 19
+    else: base_year = int(input('Please enter base-year(year of 1st year student right now) ex:19 '))
     _limits['base_year'] = base_year
+
+if(base_url == ""):
+    if on_travis: base_url = "14.139.56.15"
+    else: base_url = int(input('Please enter base-url(url in portal) ex: 14.139.56.15 '))
+    _limits['base_url'] = base_url
 
 default_no_of_std = _limits['default_no_of_std']
 iiitu_no_of_std = _limits['iiitu_no_of_std']
