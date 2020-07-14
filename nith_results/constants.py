@@ -26,7 +26,7 @@ if(not base_year):
 
 if(base_url == ""):
     if on_travis: base_url = "14.139.56.15"
-    else: base_url = int(input('Please enter base-url(url in portal) ex: 14.139.56.15 '))
+    else: base_url = str(input('Please enter base-url(url in portal) ex: 14.139.56.15 '))
     _limits['base_url'] = base_url
 
 default_no_of_std = _limits['default_no_of_std']
