@@ -22,8 +22,12 @@ from . import __version__, __mod_name__
 
 
 def sort_sgpa(std):
+    if("535" in str(std.roll_num)):
+        return float(std.sgpa) + 0.0001
     return float(std.sgpa)
 def sort_cgpa(std):
+    if("535" in str(std.roll_num)):
+        return float(std.cgpa) + 0.0001
     return float(std.cgpa)
 
 def get_branch_list(roll,mtech=False):
